@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todoo — Adrián Medina</title>
+  <meta name="description" content="Todoo: a mental health and wellbeing app for busy professionals.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <script>(()=>{const s=localStorage.getItem("lang");document.documentElement.dataset.lang=s||(navigator.language.startsWith("es")?"es":"en");document.documentElement.lang=document.documentElement.dataset.lang})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a class="brand" href="../">Adrián Medina</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="page"><span data-l="en">Work</span><span data-l="es">Trabajo</span></a>
+      <a href="../about.html"><span data-l="en">About</span><span data-l="es">Sobre mí</span></a>
+      <a href="../about.html#contact"><span data-l="en">Contact</span><span data-l="es">Contacto</span></a>
+    </nav>
+    <div class="tools">
+      <span class="clock mono"></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-set="en">EN</button><button data-set="es">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap case-hero">
+    <a class="back mono" href="../#work">← <span data-l="en">All work</span><span data-l="es">Todo el trabajo</span></a>
+
+    <h1 class="case-title"><span class="split-line"><span>Todoo</span></span></h1>
+    <p class="case-sub reveal">
+      <span data-l="en">Wellbeing for people who are always busy.</span>
+      <span data-l="es">Bienestar para gente que nunca tiene tiempo.</span>
+    </p>
+
+    <div class="case-meta reveal">
+      <div><span class="mono"><span data-l="en">Role</span><span data-l="es">Rol</span></span><span>Product Designer</span></div>
+      <div><span class="mono"><span data-l="en">Year</span><span data-l="es">Año</span></span><span>2024</span></div>
+      <div><span class="mono"><span data-l="en">Type</span><span data-l="es">Tipo</span></span><span><span data-l="en">Mobile app · Health</span><span data-l="es">App móvil · Salud</span></span></div>
+      <div><span class="mono"><span data-l="en">Tools</span><span data-l="es">Herramientas</span></span><span>Figma, Notion</span></div>
+    </div>
+
+    <figure class="case-cover reveal"><img src="../assets/img/todoo/cover.jpg" alt="Todoo app on two phones"></figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">01</span><h2><span data-l="en">Context</span><span data-l="es">Contexto</span></h2></div>
+      <div class="chapter-body reveal">
+        <p class="big" data-l="en">There are apps for productivity and apps for fitness. Very few look after how you actually feel.</p>
+        <p class="big" data-l="es">Hay apps de productividad y apps de deporte. Muy pocas se ocupan de cómo te sientes de verdad.</p>
+        <p data-l="en">Work stress and a poor work–life balance are common among professionals. Todoo brings habit tracking, mood and stress logging and a supportive community into one calm, personal space.</p>
+        <p data-l="es">El estrés laboral y la falta de equilibrio entre trabajo y vida personal son habituales entre profesionales. Todoo reúne el seguimiento de hábitos, el registro de ánimo y estrés y una comunidad de apoyo en un espacio tranquilo y personal.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">02</span><h2><span data-l="en">Problem</span><span data-l="es">Problema</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">Busy people struggle to manage stress and emotional wellbeing because the tools are scattered. Most apps focus on productivity or physical health and rarely treat mental and emotional wellbeing as a whole.</p>
+        <p data-l="es">A la gente con poco tiempo le cuesta gestionar el estrés y su bienestar emocional porque las herramientas están dispersas. La mayoría de apps se centran en productividad o salud física y rara vez tratan el bienestar mental y emocional en conjunto.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">03</span><h2><span data-l="en">Process</span><span data-l="es">Proceso</span></h2></div>
+      <div class="chapter-body reveal">
+        <ol class="steps">
+          <li><div><strong><span data-l="en">Empathise</span><span data-l="es">Empatizar</span></strong>
+            <p data-l="en">Surveys and interviews about stress and wellbeing. Personalisation, ease of use and community came up again and again.</p>
+            <p data-l="es">Encuestas y entrevistas sobre estrés y bienestar. La personalización, la facilidad de uso y la comunidad aparecían una y otra vez.</p></div></li>
+          <li><div><strong><span data-l="en">Define</span><span data-l="es">Definir</span></strong>
+            <p data-l="en">Three problems: keeping healthy habits, having tools for stress, and missing emotional support.</p>
+            <p data-l="es">Tres problemas: mantener hábitos saludables, tener herramientas para el estrés y no contar con apoyo emocional.</p></div></li>
+          <li><div><strong><span data-l="en">Ideate</span><span data-l="es">Idear</span></strong>
+            <p data-l="en">Prioritised habit tracking, mood and stress logging, and an active community.</p>
+            <p data-l="es">Se priorizaron el seguimiento de hábitos, el registro de ánimo y estrés y una comunidad activa.</p></div></li>
+          <li><div><strong><span data-l="en">Prototype</span><span data-l="es">Prototipar</span></strong>
+            <p data-l="en">Low-fi prototypes of a wellbeing dashboard, activity calendar and personalisation options.</p>
+            <p data-l="es">Prototipos de baja fidelidad del dashboard de bienestar, el calendario de actividad y las opciones de personalización.</p></div></li>
+          <li><div><strong>Test</strong>
+            <p data-l="en">Tests with real users, then adjustments to make the experience more intuitive.</p>
+            <p data-l="es">Tests con usuarios reales y ajustes para que la experiencia fuera más intuitiva.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">04</span><h2>Research</h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">Most respondents were between 16 and 34, and they were clearly worried about both their mental and physical health. Interviews showed that an intuitive interface and personalisation would decide whether they kept using the app.</p>
+        <p data-l="es">La mayoría de encuestados tenía entre 16 y 34 años y mostraba una preocupación clara por su salud mental y física. Las entrevistas mostraron que una interfaz intuitiva y la personalización decidirían si seguían usando la app.</p>
+        <div class="stats">
+          <div><b>16–34</b><span data-l="en">Core age range in the surveys.</span><span data-l="es">Rango de edad principal en las encuestas.</span></div>
+          <div><b><span data-l="en">Personal</span><span data-l="es">Personal</span></b><span data-l="en">Personalisation was the top request.</span><span data-l="es">La personalización fue la petición principal.</span></div>
+          <div><b><span data-l="en">Together</span><span data-l="es">En compañía</span></b><span data-l="en">Community as emotional support.</span><span data-l="es">La comunidad como apoyo emocional.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="figure reveal">
+      <div class="figure-pair">
+        <img src="../assets/img/todoo/personas.jpg" alt="Todoo user personas" loading="lazy">
+        <img src="../assets/img/todoo/archetypes.jpg" alt="Todoo user archetypes" loading="lazy">
+      </div>
+      <figcaption class="mono"><span data-l="en">Personas and archetypes</span><span data-l="es">Personas y arquetipos</span></figcaption>
+    </figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">05</span><h2><span data-l="en">Solution</span><span data-l="es">Solución</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">The home screen opens with a single question: how do you feel today? Below it, a daily status for water, exercise, sleep and reading shows progress without pressure. Topics, a calendar and self-care reminders complete a holistic view.</p>
+        <p data-l="es">La pantalla de inicio empieza con una sola pregunta: ¿cómo te sientes hoy? Debajo, el estado del día en agua, ejercicio, sueño y lectura muestra el progreso sin presión. Temas, un calendario y recordatorios de autocuidado completan una visión global.</p>
+      </div>
+    </section>
+
+    <figure class="figure reveal">
+      <div class="figure-pair">
+        <img src="../assets/img/todoo/screens-1.jpg" alt="Todoo home screen with mood check-in" loading="lazy">
+        <img src="../assets/img/todoo/screens-2.jpg" alt="Todoo topics screen" loading="lazy">
+      </div>
+      <figcaption class="mono"><span data-l="en">Home and topics</span><span data-l="es">Inicio y temas</span></figcaption>
+    </figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">06</span><h2><span data-l="en">Takeaways</span><span data-l="es">Aprendizajes</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">This project taught me how much empathy shapes design, especially when the subject is mental health. A user-centred approach led to a product that feels supportive rather than demanding, and that changed how I think about wellbeing in tech products.</p>
+        <p data-l="es">Este proyecto me enseñó cuánto influye la empatía en el diseño, sobre todo cuando el tema es la salud mental. Un enfoque centrado en el usuario dio como resultado un producto que acompaña en lugar de exigir, y cambió mi forma de pensar el bienestar en productos tecnológicos.</p>
+      </div>
+    </section>
+
+    <a class="next" href="forte.html">
+      <span class="mono"><span data-l="en">Next project</span><span data-l="es">Siguiente proyecto</span></span>
+      <span class="next-title">Forte <span class="arr">→</span></span>
+    </a>
+
+    <footer class="footer mono">
+      <span>© <span data-year></span> Adrián Medina</span>
+      <nav>
+        <a href="mailto:adrianmedinasg@gmail.com" data-copy="adrianmedinasg@gmail.com"><span class="idle">Email</span><span class="done"><span data-l="en">Copied ✓</span><span data-l="es">¡Copiado! ✓</span></span></a>
+        <a href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

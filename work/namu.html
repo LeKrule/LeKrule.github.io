@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Namu — Adrián Medina</title>
+  <meta name="description" content="Namu: an app that makes household water use visible and turns saving it into a habit.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <script>(()=>{const s=localStorage.getItem("lang");document.documentElement.dataset.lang=s||(navigator.language.startsWith("es")?"es":"en");document.documentElement.lang=document.documentElement.dataset.lang})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a class="brand" href="../">Adrián Medina</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="page"><span data-l="en">Work</span><span data-l="es">Trabajo</span></a>
+      <a href="../about.html"><span data-l="en">About</span><span data-l="es">Sobre mí</span></a>
+      <a href="../about.html#contact"><span data-l="en">Contact</span><span data-l="es">Contacto</span></a>
+    </nav>
+    <div class="tools">
+      <span class="clock mono"></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-set="en">EN</button><button data-set="es">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap case-hero">
+    <a class="back mono" href="../#work">← <span data-l="en">All work</span><span data-l="es">Todo el trabajo</span></a>
+
+    <h1 class="case-title"><span class="split-line"><span>Namu</span></span></h1>
+    <p class="case-sub reveal">
+      <span data-l="en">Making household water use visible, and saving it a habit.</span>
+      <span data-l="es">Hacer visible el consumo de agua en casa y convertir el ahorro en hábito.</span>
+    </p>
+
+    <div class="case-meta reveal">
+      <div><span class="mono"><span data-l="en">Role</span><span data-l="es">Rol</span></span><span>Product Designer</span></div>
+      <div><span class="mono"><span data-l="en">Year</span><span data-l="es">Año</span></span><span>2024</span></div>
+      <div><span class="mono"><span data-l="en">Format</span><span data-l="es">Formato</span></span><span><span data-l="en">7-day design sprint · Team</span><span data-l="es">Design sprint de 7 días · Equipo</span></span></div>
+      <div><span class="mono"><span data-l="en">Tools</span><span data-l="es">Herramientas</span></span><span>Figma</span></div>
+    </div>
+
+    <figure class="case-cover reveal"><img src="../assets/img/namu/cover.jpg" alt="Overview of Namu app screens"></figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">01</span><h2><span data-l="en">Context</span><span data-l="es">Contexto</span></h2></div>
+      <div class="chapter-body reveal">
+        <p class="big" data-l="en">Water is getting scarcer, but at home it still feels unlimited, because nobody sees how much they use.</p>
+        <p class="big" data-l="es">El agua es cada vez más escasa, pero en casa sigue pareciendo ilimitada, porque nadie ve cuánta gasta.</p>
+        <p data-l="en">Population growth, urbanisation and climate change are pushing demand up. Namu began as a team project driven by a shared concern: domestic water waste, and how little most people know about their own consumption.</p>
+        <p data-l="es">El crecimiento de la población, la urbanización y el cambio climático disparan la demanda. Namu nació como un proyecto en equipo a partir de una preocupación común: el desperdicio de agua en casa y lo poco que sabemos de nuestro propio consumo.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">02</span><h2><span data-l="en">Challenge</span><span data-l="es">Reto</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">Reduce household water consumption by making it visible, then keep people motivated long enough for saving to become a habit.</p>
+        <p data-l="es">Reducir el consumo de agua en casa haciéndolo visible y mantener la motivación el tiempo suficiente para que ahorrar se convierta en hábito.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">03</span><h2><span data-l="en">The sprint</span><span data-l="es">El sprint</span></h2></div>
+      <div class="chapter-body reveal">
+        <ol class="steps">
+          <li><div><strong><span data-l="en">Kickoff and research</span><span data-l="es">Kickoff e investigación</span></strong>
+            <p data-l="en">Roadmap, goals and desk research on water use and waste.</p>
+            <p data-l="es">Hoja de ruta, objetivos e investigación sobre consumo y desperdicio de agua.</p></div></li>
+          <li><div><strong><span data-l="en">Define</span><span data-l="es">Definir</span></strong>
+            <p data-l="en">Sprint questions, "How might we…" statements, personas and a journey map, then team voting.</p>
+            <p data-l="es">Preguntas del sprint, "¿Cómo podríamos…?", personas y journey map, y votación en equipo.</p></div></li>
+          <li><div><strong><span data-l="en">Ideate</span><span data-l="es">Idear</span></strong>
+            <p data-l="en">Lightning demos and Crazy 8's, then a vote on which ideas went into the prototype.</p>
+            <p data-l="es">Lightning demos y Crazy 8's, y votación de las ideas que pasaban al prototipo.</p></div></li>
+          <li><div><strong><span data-l="en">Storyboard</span><span data-l="es">Storyboard</span></strong>
+            <p data-l="en">Main flows sketched as a storyboard, roles and an action plan assigned.</p>
+            <p data-l="es">Flujos principales en un storyboard, con roles y plan de acción asignados.</p></div></li>
+          <li><div><strong><span data-l="en">Design system and wireframes</span><span data-l="es">Design system y wireframes</span></strong>
+            <p data-l="en">Colour, type and components defined first, then wireframes for every screen.</p>
+            <p data-l="es">Primero color, tipografía y componentes; después, wireframes de cada pantalla.</p></div></li>
+          <li><div><strong><span data-l="en">Test and present</span><span data-l="es">Testear y presentar</span></strong>
+            <p data-l="en">User tests on clarity and ease of use, then refinements and a final presentation to stakeholders.</p>
+            <p data-l="es">Tests con usuarios sobre claridad y facilidad de uso, ajustes y presentación final a stakeholders.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <figure class="figure reveal">
+      <img src="../assets/img/namu/persona.jpg" alt="Namu persona: Benito" loading="lazy">
+      <figcaption class="mono"><span data-l="en">Persona: Benito, 22, environmental science student</span><span data-l="es">Persona: Benito, 22 años, estudiante de ciencias ambientales</span></figcaption>
+    </figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">04</span><h2><span data-l="en">Solution</span><span data-l="es">Solución</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">Namu tracks consumption in real time, connects to the water bill, and turns saving into personal and shared challenges. Rewards come from partner discounts, and a community area shows that saving is something people do together.</p>
+        <p data-l="es">Namu mide el consumo en tiempo real, se conecta a la factura del agua y convierte el ahorro en retos personales y compartidos. Las recompensas son descuentos en comercios asociados, y una zona de comunidad muestra que ahorrar es algo que se hace en grupo.</p>
+        <div class="stats">
+          <div><b><span data-l="en">Visibility</span><span data-l="es">Visibilidad</span></b><span data-l="en">Daily use and savings in litres and euros.</span><span data-l="es">Consumo diario y ahorro en litros y euros.</span></div>
+          <div><b><span data-l="en">Motivation</span><span data-l="es">Motivación</span></b><span data-l="en">Challenges, streaks and real rewards.</span><span data-l="es">Retos, rachas y recompensas reales.</span></div>
+          <div><b><span data-l="en">Community</span><span data-l="es">Comunidad</span></b><span data-l="en">Shared challenges and tips.</span><span data-l="es">Retos compartidos y consejos.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="figure reveal">
+      <img src="../assets/img/namu/screens-1.jpg" alt="Challenge and rewards screens" loading="lazy">
+      <figcaption class="mono"><span data-l="en">Challenges and rewards</span><span data-l="es">Retos y recompensas</span></figcaption>
+    </figure>
+    <figure class="figure reveal">
+      <img src="../assets/img/namu/screens-2.jpg" alt="Tips and profile screens" loading="lazy">
+      <figcaption class="mono"><span data-l="en">Tips and profile</span><span data-l="es">Consejos y perfil</span></figcaption>
+    </figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">05</span><h2><span data-l="en">Takeaways</span><span data-l="es">Aprendizajes</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">A tight sprint forces decisions. Research early on shaped which features made the cut, and testing confirmed that seeing consumption in real numbers is what changes behaviour. The economic savings matter as much as the environmental ones.</p>
+        <p data-l="es">Un sprint corto obliga a decidir. La investigación del principio marcó qué funcionalidades entraban, y los tests confirmaron que ver el consumo en cifras reales es lo que cambia el comportamiento. El ahorro económico pesa tanto como el medioambiental.</p>
+      </div>
+    </section>
+
+    <a class="next" href="todoo.html">
+      <span class="mono"><span data-l="en">Next project</span><span data-l="es">Siguiente proyecto</span></span>
+      <span class="next-title">Todoo <span class="arr">→</span></span>
+    </a>
+
+    <footer class="footer mono">
+      <span>© <span data-year></span> Adrián Medina</span>
+      <nav>
+        <a href="mailto:adrianmedinasg@gmail.com" data-copy="adrianmedinasg@gmail.com"><span class="idle">Email</span><span class="done"><span data-l="en">Copied ✓</span><span data-l="es">¡Copiado! ✓</span></span></a>
+        <a href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

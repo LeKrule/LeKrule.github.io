@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forte — Adrián Medina</title>
+  <meta name="description" content="Forte: a personal finance app that combines money management, investing and financial education.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <script>(()=>{const s=localStorage.getItem("lang");document.documentElement.dataset.lang=s||(navigator.language.startsWith("es")?"es":"en");document.documentElement.lang=document.documentElement.dataset.lang})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a class="brand" href="../">Adrián Medina</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="page"><span data-l="en">Work</span><span data-l="es">Trabajo</span></a>
+      <a href="../about.html"><span data-l="en">About</span><span data-l="es">Sobre mí</span></a>
+      <a href="../about.html#contact"><span data-l="en">Contact</span><span data-l="es">Contacto</span></a>
+    </nav>
+    <div class="tools">
+      <span class="clock mono"></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-set="en">EN</button><button data-set="es">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap case-hero">
+    <a class="back mono" href="../#work">← <span data-l="en">All work</span><span data-l="es">Todo el trabajo</span></a>
+
+    <h1 class="case-title"><span class="split-line"><span>Forte</span></span></h1>
+    <p class="case-sub reveal">
+      <span data-l="en">One place to manage money, invest and learn how both work.</span>
+      <span data-l="es">Un solo lugar para gestionar tu dinero, invertir y entender cómo funciona todo.</span>
+    </p>
+
+    <div class="case-meta reveal">
+      <div><span class="mono"><span data-l="en">Role</span><span data-l="es">Rol</span></span><span>Product Designer</span></div>
+      <div><span class="mono"><span data-l="en">Year</span><span data-l="es">Año</span></span><span>2024</span></div>
+      <div><span class="mono"><span data-l="en">Type</span><span data-l="es">Tipo</span></span><span><span data-l="en">Mobile app · Fintech</span><span data-l="es">App móvil · Fintech</span></span></div>
+      <div><span class="mono"><span data-l="en">Tools</span><span data-l="es">Herramientas</span></span><span>Figma, Framer, Notion</span></div>
+    </div>
+
+    <figure class="case-cover reveal"><img src="../assets/img/forte/cover.jpg" alt="Forte app on two phones"></figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">01</span><h2><span data-l="en">Context</span><span data-l="es">Contexto</span></h2></div>
+      <div class="chapter-body reveal">
+        <p class="big" data-l="en">Most banking apps show you your balance. Very few help you understand what to do with it.</p>
+        <p class="big" data-l="es">Casi todas las apps de banca te enseñan tu saldo. Muy pocas te ayudan a entender qué hacer con él.</p>
+        <p data-l="en">People juggle several accounts, cards and savings goals, and investing still feels like something for experts. Forte set out to bring account management, real-time investment data and financial education into a single, approachable app.</p>
+        <p data-l="es">La gente maneja varias cuentas, tarjetas y objetivos de ahorro, e invertir sigue pareciendo cosa de expertos. Forte buscaba reunir en una sola app, fácil de usar, la gestión de cuentas, los datos de inversión en tiempo real y la educación financiera.</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">02</span><h2><span data-l="en">Problem</span><span data-l="es">Problema</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">How might we help people control spending and reach their financial goals, without making money feel complicated or intimidating?</p>
+        <p data-l="es">¿Cómo podemos ayudar a la gente a controlar sus gastos y alcanzar sus metas financieras sin que el dinero parezca complicado ni intimidante?</p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">03</span><h2><span data-l="en">Process</span><span data-l="es">Proceso</span></h2></div>
+      <div class="chapter-body reveal">
+        <ol class="steps">
+          <li><div><strong><span data-l="en">Empathise</span><span data-l="es">Empatizar</span></strong>
+            <p data-l="en">Interviews, surveys and observation to understand financial habits and pain points.</p>
+            <p data-l="es">Entrevistas, encuestas y observación para entender hábitos financieros y puntos de dolor.</p></div></li>
+          <li><div><strong><span data-l="en">Define</span><span data-l="es">Definir</span></strong>
+            <p data-l="en">Personas and empathy maps. Two core problems: fragmented tools and no accessible financial education.</p>
+            <p data-l="es">Personas y mapas de empatía. Dos problemas clave: herramientas dispersas y ninguna educación financiera accesible.</p></div></li>
+          <li><div><strong><span data-l="en">Ideate</span><span data-l="es">Idear</span></strong>
+            <p data-l="en">Brainstorming, SCAMPER and mind maps, then ideas scored on feasibility, impact and user fit.</p>
+            <p data-l="es">Brainstorming, SCAMPER y mapas mentales; después, las ideas se puntuaron por viabilidad, impacto y encaje con el usuario.</p></div></li>
+          <li><div><strong><span data-l="en">Prototype</span><span data-l="es">Prototipar</span></strong>
+            <p data-l="en">From low-fidelity wireframes to a high-fidelity prototype, iterating on every round of feedback.</p>
+            <p data-l="es">De wireframes de baja fidelidad a un prototipo de alta fidelidad, iterando con cada ronda de feedback.</p></div></li>
+          <li><div><strong>Test</strong>
+            <p data-l="en">Several rounds of usability testing with real users before settling the final flows.</p>
+            <p data-l="es">Varias rondas de tests de usabilidad con usuarios reales antes de cerrar los flujos finales.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">04</span><h2>Research</h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">Surveys showed a young, well-educated audience that already uses banking apps daily. They care most about balance checks, transfers and alerts, and they showed strong interest in learning about finance. Interviews added the rest: a need for an interface that is easy to navigate, with budgeting, investing and real-time notifications in the same place.</p>
+        <p data-l="es">Las encuestas mostraron un público joven y con estudios que ya usa apps de banca a diario. Lo que más valoran es consultar el saldo, hacer transferencias y recibir alertas, y mostraron mucho interés por aprender de finanzas. Las entrevistas completaron el cuadro: necesitaban una interfaz fácil de navegar, con presupuestos, inversión y notificaciones en tiempo real en el mismo sitio.</p>
+        <div class="stats">
+          <div><b><span data-l="en">Clarity</span><span data-l="es">Claridad</span></b><span data-l="en">Balance, movements and goals at a glance.</span><span data-l="es">Saldo, movimientos y objetivos de un vistazo.</span></div>
+          <div><b><span data-l="en">Education</span><span data-l="es">Educación</span></b><span data-l="en">Learn while you use it, not in a separate course.</span><span data-l="es">Aprender mientras la usas, no en un curso aparte.</span></div>
+          <div><b><span data-l="en">Trust</span><span data-l="es">Confianza</span></b><span data-l="en">Security and real-time alerts as a baseline.</span><span data-l="es">Seguridad y alertas en tiempo real como base.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="figure reveal">
+      <div class="figure-pair">
+        <img src="../assets/img/forte/persona.jpg" alt="Forte user persona" loading="lazy">
+        <img src="../assets/img/forte/archetypes.jpg" alt="Forte user archetypes" loading="lazy">
+      </div>
+      <figcaption class="mono"><span data-l="en">Persona and archetypes</span><span data-l="es">Persona y arquetipos</span></figcaption>
+    </figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">05</span><h2><span data-l="en">Solution</span><span data-l="es">Solución</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">Forte brings accounts, spending, savings goals and investments into one dark, focused interface. Goals are shown as progress, not spreadsheets. Investing screens pair live charts with short, plain-language explanations, so learning happens in context.</p>
+        <p data-l="es">Forte reúne cuentas, gastos, objetivos de ahorro e inversiones en una interfaz oscura y centrada. Los objetivos se muestran como progreso, no como hojas de cálculo. Las pantallas de inversión combinan gráficos en tiempo real con explicaciones breves y en lenguaje claro, para que el aprendizaje ocurra en contexto.</p>
+      </div>
+    </section>
+
+    <figure class="figure reveal">
+      <img src="../assets/img/forte/screens-1.jpg" alt="Wallet and savings goals screens" loading="lazy">
+      <figcaption class="mono"><span data-l="en">Wallet and savings goals</span><span data-l="es">Cartera y objetivos de ahorro</span></figcaption>
+    </figure>
+    <figure class="figure reveal">
+      <img src="../assets/img/forte/screens-2.jpg" alt="Investment and learning screens" loading="lazy">
+      <figcaption class="mono"><span data-l="en">Investments and learning</span><span data-l="es">Inversiones y aprendizaje</span></figcaption>
+    </figure>
+
+    <section class="chapter">
+      <div class="chapter-label"><span class="mono">06</span><h2><span data-l="en">Takeaways</span><span data-l="es">Aprendizajes</span></h2></div>
+      <div class="chapter-body reveal">
+        <p data-l="en">Combining surveys with interviews gave us both the numbers and the stories behind them, and that guided every product decision. Users responded well to how easy the app was to use and to the sense of security, and those findings are the starting point for the next iterations.</p>
+        <p data-l="es">Combinar encuestas y entrevistas nos dio tanto los datos como las historias detrás de ellos, y eso guió cada decisión de producto. A los usuarios les gustó lo fácil que era usar la app y la sensación de seguridad, y esas conclusiones son el punto de partida de las siguientes iteraciones.</p>
+      </div>
+    </section>
+
+    <a class="next" href="namu.html">
+      <span class="mono"><span data-l="en">Next project</span><span data-l="es">Siguiente proyecto</span></span>
+      <span class="next-title">Namu <span class="arr">→</span></span>
+    </a>
+
+    <footer class="footer mono">
+      <span>© <span data-year></span> Adrián Medina</span>
+      <nav>
+        <a href="mailto:adrianmedinasg@gmail.com" data-copy="adrianmedinasg@gmail.com"><span class="idle">Email</span><span class="done"><span data-l="en">Copied ✓</span><span data-l="es">¡Copiado! ✓</span></span></a>
+        <a href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
