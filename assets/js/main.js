@@ -62,6 +62,18 @@
     update();
   }
 
+  /* ---------- Menú inferior en móvil: se oculta al bajar, vuelve al subir ---------- */
+  {
+    let lastY = scrollY;
+    addEventListener("scroll", () => {
+      const y = scrollY;
+      const nearEdge = y < 80 || innerHeight + y > document.documentElement.scrollHeight - 40;
+      if (nearEdge || y < lastY - 6) root.classList.remove("nav-away");
+      else if (y > lastY + 6) root.classList.add("nav-away");
+      if (Math.abs(y - lastY) > 6) lastY = y;
+    }, { passive: true });
+  }
+
   /* ---------- Etiqueta que sigue al cursor sobre los proyectos ---------- */
   const tag = document.querySelector(".cursor-tag");
   if (tag && matchMedia("(hover: hover)").matches) {
