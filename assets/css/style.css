@@ -142,13 +142,7 @@ html[data-lang="es"] .lang [data-set="es"] { background: var(--fg); color: var(-
 }
 .hero-meta div { display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
 .hero-meta .mono { color: var(--fg-2); }
-.chip-status {
-  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
-  padding: 5px 12px 5px 10px; border-radius: 999px;
-  background: #e2eddc; color: #2c6236; border: 1px solid #c5dbbd;
-  font-size: 14px; font-weight: 500; line-height: 1.2;
-}
-.status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #3f9a55; box-shadow: 0 0 0 0 rgba(63,154,85,.55); animation: pulse 2.4s infinite; }
+.status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #3f9a55; margin-right: 8px; box-shadow: 0 0 0 0 rgba(63,154,85,.55); animation: pulse 2.4s infinite; }
 @keyframes pulse { 70% { box-shadow: 0 0 0 7px rgba(63,154,85,0); } 100% { box-shadow: 0 0 0 0 rgba(63,154,85,0); } }
 
 /* ---------- Encabezados de sección ---------- */
