@@ -350,6 +350,9 @@ html[data-lang="es"] .lang [data-set="es"] { background: var(--fg); color: var(-
 .figure img { border-radius: 14px; width: 100%; }
 .figure figcaption { margin-top: 12px; color: var(--fg-2); }
 .figure-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+/* la grabación original es pequeña: se muestra contenida para que se vea nítida */
+.video-panel { display: flex; justify-content: center; }
+.video-panel video { width: min(480px, 100%); aspect-ratio: 1; border-radius: 14px; display: block; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 12px; }
 .stats div { border-top: 1px solid var(--rule); padding-top: 14px; }
 .stats b { display: block; font-weight: 450; font-size: 22px; letter-spacing: -.02em; margin-bottom: 6px; }
