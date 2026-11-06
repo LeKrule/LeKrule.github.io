@@ -77,14 +77,18 @@
   /* ---------- Etiqueta que sigue al cursor sobre los proyectos ---------- */
   const tag = document.querySelector(".cursor-tag");
   if (tag && matchMedia("(hover: hover)").matches) {
-    let tx = 0, ty = 0, cx = 0, cy = 0;
-    addEventListener("mousemove", (e) => { tx = e.clientX; ty = e.clientY; });
+    let tx = 0, ty = 0, cx = 0, cy = 0, moving = false;
+    // solo se anima mientras la etiqueta está alcanzando al cursor
     const loop = () => {
       cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
       tag.style.left = `${cx}px`; tag.style.top = `${cy}px`;
-      requestAnimationFrame(loop);
+      if (Math.abs(tx - cx) > 0.3 || Math.abs(ty - cy) > 0.3) requestAnimationFrame(loop);
+      else moving = false;
     };
-    loop();
+    addEventListener("mousemove", (e) => {
+      tx = e.clientX; ty = e.clientY;
+      if (!moving) { moving = true; requestAnimationFrame(loop); }
+    }, { passive: true });
     document.querySelectorAll(".project-media").forEach((m) => {
       m.addEventListener("mouseenter", () => tag.classList.add("on"));
       m.addEventListener("mouseleave", () => tag.classList.remove("on"));
@@ -128,105 +132,147 @@
      Rejilla de puntos que reacciona al ratón: los puntos cercanos crecen,
      se apartan del cursor y toman el color de acento. El movimiento rápido
      deja una estela que se desvanece. La rejilla se desplaza un poco con
-     el scroll para dar profundidad. */
+     el scroll para dar profundidad.
+
+     Rendimiento: la rejilla estática se pinta de una vez con un patrón y
+     solo se calculan los puntos cerca del cursor o de la estela. Cuando no
+     pasa nada (ratón quieto, pestaña oculta) el bucle se detiene. */
   const canvas = document.getElementById("field");
   if (!canvas || reduceMotion) return;
   const ctx = canvas.getContext("2d");
   const GAP = 26;
   const RADIUS = 170;
-  let W, H, dpr, cols, rows;
-  let colors = {};
+  const REACH = RADIUS * 1.6;          // más allá, la influencia del cursor es nula
+  const TRAIL_REACH = 80;
+  const BASE = 1.4;                    // tamaño del punto en reposo
+  let W, H, dpr, pattern, colors = {};
   const mouse = { x: -9999, y: -9999, sx: -9999, sy: -9999, energy: 0 };
-  const trail = []; // puntos recientes del cursor
+  const trail = [];                    // puntos recientes del cursor (y en coordenadas de página)
+  let running = false, lastScroll = -1;
 
   const readColors = () => {
     const cs = getComputedStyle(root);
     const dark = root.dataset.theme === "dark";
     colors = {
       dot: dark ? "rgba(236,235,230,0.13)" : "rgba(20,20,19,0.13)",
-      hot: cs.getPropertyValue("--accent").trim() || "#4b5d8a",
-      hotDark: "#9fb0e0",
-      dark,
+      hot: dark ? "#9fb0e0" : cs.getPropertyValue("--accent").trim() || "#4b5d8a",
     };
+    // patrón con un único punto: pinta toda la rejilla en una sola operación
+    const tile = document.createElement("canvas");
+    tile.width = tile.height = Math.round(GAP * dpr);
+    const t = tile.getContext("2d");
+    t.scale(dpr, dpr);
+    t.fillStyle = colors.dot;
+    t.fillRect(-BASE / 2, -BASE / 2, BASE, BASE);
+    t.fillRect(GAP - BASE / 2, -BASE / 2, BASE, BASE);
+    t.fillRect(-BASE / 2, GAP - BASE / 2, BASE, BASE);
+    t.fillRect(GAP - BASE / 2, GAP - BASE / 2, BASE, BASE);
+    pattern = ctx.createPattern(tile, "repeat");
   };
 
   const resize = () => {
-    dpr = Math.min(devicePixelRatio || 1, 2);
+    dpr = Math.min(devicePixelRatio || 1, 1.5);
     W = innerWidth; H = innerHeight;
-    canvas.width = W * dpr; canvas.height = H * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    cols = Math.ceil(W / GAP) + 2;
-    rows = Math.ceil(H / GAP) + 2;
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    readColors();
+    wake();
+  };
+
+  const wake = () => {
+    if (running || document.hidden) return;
+    running = true;
+    requestAnimationFrame(frame);
   };
 
   addEventListener("resize", resize);
-  addEventListener("themechange", readColors);
+  addEventListener("themechange", () => { readColors(); wake(); });
+  addEventListener("scroll", wake, { passive: true });
+  document.addEventListener("visibilitychange", wake);
   addEventListener("mousemove", (e) => {
     const dx = e.clientX - mouse.x, dy = e.clientY - mouse.y;
     mouse.energy = Math.min(1, mouse.energy + Math.hypot(dx, dy) / 400);
+    if (mouse.sx < -999) { mouse.sx = e.clientX; mouse.sy = e.clientY; }
     mouse.x = e.clientX; mouse.y = e.clientY;
     trail.push({ x: e.clientX, y: e.clientY + scrollY, life: 1 });
     if (trail.length > 24) trail.shift();
-  });
-  document.addEventListener("mouseleave", () => { mouse.x = mouse.y = -9999; });
+    wake();
+  }, { passive: true });
+  document.addEventListener("mouseleave", () => { mouse.x = mouse.y = -9999; wake(); });
 
-  resize();
-  readColors();
+  // influencia (0–1) del cursor y la estela sobre un punto de la rejilla
+  const influence = (x, y) => {
+    const dx = x - mouse.sx, dy = y - mouse.sy;
+    let f = Math.exp(-(dx * dx + dy * dy) / (RADIUS * RADIUS));
+    for (const p of trail) {
+      if (p.life < 0.05) continue;
+      const tx = x - p.x, ty = y - (p.y - scrollY);
+      const td = tx * tx + ty * ty;
+      if (td < TRAIL_REACH * TRAIL_REACH) f = Math.max(f, Math.exp(-td / 2200) * p.life * 0.8);
+    }
+    return f;
+  };
 
-  const draw = (t) => {
-    ctx.clearRect(0, 0, W, H);
+  const frame = () => {
+    if (document.hidden) { running = false; return; }
+
     mouse.sx += (mouse.x - mouse.sx) * 0.12;
     mouse.sy += (mouse.y - mouse.sy) * 0.12;
     mouse.energy *= 0.94;
-    trail.forEach((p) => (p.life *= 0.93));
+    for (const p of trail) p.life *= 0.93;
+    while (trail.length && trail[0].life < 0.05) trail.shift();
 
-    const off = (scrollY * 0.25) % GAP;  // parallax vertical
-    const r2 = RADIUS * RADIUS;
-    const time = t * 0.0006;
+    const off = (scrollY * 0.25) % GAP;   // parallax vertical
 
-    for (let j = -1; j < rows; j++) {
-      const baseY = j * GAP - off;
-      for (let i = -1; i < cols; i++) {
-        const baseX = i * GAP;
-        let x = baseX, y = baseY;
+    // 1. rejilla estática de una vez
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    ctx.save();
+    ctx.translate(0, -off);
+    ctx.fillStyle = pattern;
+    ctx.fillRect(0, 0, W, H + GAP);
+    ctx.restore();
 
-        // ondulación casi imperceptible para que el fondo nunca esté muerto
-        const wave = Math.sin(baseX * 0.012 + time) * Math.cos(baseY * 0.01 + time * 0.8);
+    // 2. celdas afectadas: alrededor del cursor y de la estela
+    const cells = new Set();
+    const addBox = (cx, cy, r) => {
+      const i0 = Math.max(0, Math.floor((cx - r) / GAP)), i1 = Math.min(Math.ceil(W / GAP), Math.ceil((cx + r) / GAP));
+      const j0 = Math.max(-1, Math.floor((cy - r + off) / GAP)), j1 = Math.min(Math.ceil(H / GAP) + 1, Math.ceil((cy + r + off) / GAP));
+      for (let j = j0; j <= j1; j++) for (let i = i0; i <= i1; i++) cells.add(j * 10000 + i);
+    };
+    if (mouse.sx > -999) addBox(mouse.sx, mouse.sy, REACH);
+    for (const p of trail) addBox(p.x, p.y - scrollY, TRAIL_REACH);
 
-        // influencia del cursor
-        const dx = baseX - mouse.sx, dy = baseY - mouse.sy;
-        const d2 = dx * dx + dy * dy;
-        let f = d2 < r2 * 2.5 ? Math.exp(-d2 / r2) : 0;
-
-        // influencia de la estela
-        for (let k = 0; k < trail.length; k++) {
-          const p = trail[k];
-          if (p.life < 0.05) continue;
-          const tx = baseX - p.x, ty = baseY - (p.y - scrollY);
-          const td = tx * tx + ty * ty;
-          if (td < 6400) f = Math.max(f, Math.exp(-td / 2200) * p.life * 0.8);
-        }
-
-        if (f > 0.01) {
-          const d = Math.sqrt(d2) || 1;
-          const push = f * (10 + mouse.energy * 18);
-          x += (dx / d) * push;
-          y += (dy / d) * push;
-        }
-
-        const size = 1.4 + wave * 0.35 + f * 2.6;
-        if (f > 0.04) {
-          ctx.globalAlpha = Math.min(0.55, 0.15 + f * 0.6);
-          ctx.fillStyle = colors.dark ? colors.hotDark : colors.hot;
-        } else {
-          ctx.globalAlpha = 1;
-          ctx.fillStyle = colors.dot;
-        }
-        ctx.fillRect(x - size / 2, y - size / 2, size, size);
-      }
+    // 3. puntos activos, agrupados por opacidad para dibujarlos de golpe
+    const buckets = new Map();
+    const push = mouse.energy * 18 + 10;
+    for (const key of cells) {
+      const j = Math.floor(key / 10000), i = key - j * 10000;
+      const bx = i * GAP, by = j * GAP - off;
+      const f = influence(bx, by);
+      if (f < 0.01) continue;
+      const dx = bx - mouse.sx, dy = by - mouse.sy, d = Math.hypot(dx, dy) || 1;
+      const x = bx + (dx / d) * f * push, y = by + (dy / d) * f * push;
+      const size = BASE + f * 2.6;
+      ctx.clearRect(bx - 2, by - 2, 4, 4);          // borra el punto estático de debajo
+      const hot = f > 0.04;
+      const k = hot ? Math.round(Math.min(0.55, 0.15 + f * 0.6) * 20) : 0;
+      if (!buckets.has(k)) buckets.set(k, new Path2D());
+      buckets.get(k).rect(x - size / 2, y - size / 2, size, size);
+    }
+    for (const [k, path] of buckets) {
+      ctx.globalAlpha = k ? k / 20 : 1;
+      ctx.fillStyle = k ? colors.hot : colors.dot;
+      ctx.fill(path);
     }
     ctx.globalAlpha = 1;
-    requestAnimationFrame(draw);
+
+    // 4. ¿sigue pasando algo? si no, se duerme hasta el próximo evento
+    const settling = Math.abs(mouse.x - mouse.sx) > 0.3 || Math.abs(mouse.y - mouse.sy) > 0.3;
+    const busy = settling || mouse.energy > 0.01 || trail.length > 0 || scrollY !== lastScroll;
+    lastScroll = scrollY;
+    if (busy) requestAnimationFrame(frame);
+    else running = false;
   };
-  requestAnimationFrame(draw);
+
+  resize();
 })();
