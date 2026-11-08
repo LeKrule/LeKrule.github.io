@@ -157,7 +157,7 @@
     const dark = root.dataset.theme === "dark";
     colors = {
       dot: dark ? "rgba(236,235,230,0.13)" : "rgba(20,20,19,0.13)",
-      hot: dark ? "#9fb0e0" : cs.getPropertyValue("--accent").trim() || "#4b5d8a",
+      hot: dark ? "#c2705f" : "#8d362e",
     };
     // patrón con un único punto: pinta toda la rejilla en una sola operación
     const tile = document.createElement("canvas");
