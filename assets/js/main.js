@@ -6,14 +6,16 @@
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- Idioma (EN / ES) ---------- */
+  const langButtons = document.querySelectorAll(".lang [data-set]");
+  const markLang = () => langButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === root.dataset.lang));
   const setLang = (lang) => {
     root.dataset.lang = lang;
     root.lang = lang;
     localStorage.setItem("lang", lang);
+    markLang();
   };
-  document.querySelectorAll(".lang [data-set]").forEach((btn) =>
-    btn.addEventListener("click", () => setLang(btn.dataset.set))
-  );
+  langButtons.forEach((btn) => btn.addEventListener("click", () => setLang(btn.dataset.set)));
+  markLang();
 
   /* ---------- Hora en Madrid ---------- */
   const clock = document.querySelector(".clock");
