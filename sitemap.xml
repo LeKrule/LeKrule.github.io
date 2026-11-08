@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://adrianmedina.design/</loc><lastmod>2026-11-06</lastmod><priority>1.0</priority></url>
-  <url><loc>https://adrianmedina.design/about.html</loc><lastmod>2026-11-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://adrianmedina.design/work/forte.html</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://adrianmedina.design/work/namu.html</loc><lastmod>2026-11-06</lastmod><priority>0.5</priority></url>
-  <url><loc>https://adrianmedina.design/work/todoo.html</loc><lastmod>2026-11-06</lastmod><priority>0.5</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://adrianmedina.design/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/forte/cover.jpg</image:loc></image:image>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/namu/cover.jpg</image:loc></image:image>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/todoo/cover.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://adrianmedina.design/about.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/adrian.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://adrianmedina.design/work/forte.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/forte/cover.jpg</image:loc></image:image>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/forte/learn.jpg</image:loc></image:image>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/forte/goals.jpg</image:loc></image:image>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/forte/invest.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://adrianmedina.design/work/namu.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.5</priority>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/namu/cover.jpg</image:loc></image:image>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/namu/screens-1.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://adrianmedina.design/work/todoo.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.5</priority>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/todoo/cover.jpg</image:loc></image:image>
+    <image:image><image:loc>https://adrianmedina.design/assets/img/todoo/screens-1.jpg</image:loc></image:image>
+  </url>
 </urlset>

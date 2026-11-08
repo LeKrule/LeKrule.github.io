@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Adrián Medina</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f2f0eb">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <script>(()=>{const s=localStorage.getItem("lang");document.documentElement.dataset.lang=s||(navigator.language.startsWith("es")?"es":"en");document.documentElement.lang=document.documentElement.dataset.lang})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <a class="brand" href="/">Adrián Medina</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/"><span data-l="en">Work</span><span data-l="es">Trabajo</span></a>
+      <a href="/about.html"><span data-l="en">About</span><span data-l="es">Sobre mí</span></a>
+      <a href="/about.html#contact"><span data-l="en">Contact</span><span data-l="es">Contacto</span></a>
+    </nav>
+    <div class="tools">
+      <span class="clock mono"></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set="en">EN</button><button type="button" data-set="es">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap hero">
+    <p class="mono muted" style="margin:0 0 20px">404</p>
+    <h1 data-l="en">This page <span class="serif">doesn't exist.</span></h1>
+    <h1 data-l="es">Esta página <span class="serif">no existe.</span></h1>
+    <a class="link-arrow" href="/" style="align-self:flex-start;margin-top:32px"><span data-l="en">Back to the portfolio</span><span data-l="es">Volver al portfolio</span> <span class="arr">→</span></a>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
