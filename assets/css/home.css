@@ -1,0 +1,78 @@
+/* Portada: presentación, trabajo, experiencia y contacto */
+
+/* Presentación en primera persona, como una carta corta */
+.bio { margin: auto 0 0; padding-top: 48px; max-width: 42ch; }
+.bio h1 { margin: 0 0 22px; font: 450 clamp(26px, 2.3vw, 34px)/1.18 var(--display); letter-spacing: -.02em; }
+.bio p { margin: 0 0 14px; font-size: 16px; line-height: 1.6; }
+.bio p:last-child { margin-bottom: 0; }
+
+/* Términos que abren una vista previa */
+.term {
+  all: unset; cursor: default;
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  transition: color .15s ease-out, text-decoration-color .15s ease-out;
+}
+.term:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.term.on { color: var(--accent); text-decoration-color: var(--accent); }
+
+.toc { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 40px; }
+.toc a { color: var(--ink-2); transition: color .15s ease-out; }
+.toc a.on { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; text-decoration-color: var(--accent); }
+.status { margin: 28px 0 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+.main section { scroll-margin-top: 24px; }
+.main section + section { margin-top: 120px; }
+
+/* ---------- Trabajo ---------- */
+.case { padding: 8px; margin-bottom: 16px; transition: box-shadow .2s ease-out; }
+.case img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: calc(var(--r) - 8px); outline: 1px solid oklch(0 0 0 / .08); outline-offset: -1px; }
+.case-text { display: grid; grid-template-columns: 1fr auto; gap: 4px 24px; padding: 16px 12px 12px; }
+.case-text h3 { margin: 0; font: 500 22px/1.2 var(--display); letter-spacing: -.01em; }
+.case-text p { margin: 0; grid-column: 1; color: var(--ink-2); max-width: 56ch; }
+.case-year { grid-column: 2; grid-row: 1; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.soon .case-text { padding: 12px; }
+
+/* ---------- Experiencia ---------- */
+.index { list-style: none; margin: 0; padding: 0; }
+.index li { display: grid; grid-template-columns: 84px 110px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.index li:last-child { border-bottom: 1px solid var(--rule); }
+.index time { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.index b { font-weight: 500; }
+.index li > span { color: var(--ink-2); }
+.after-index { margin: 16px 0 0; }
+
+/* ---------- Contacto ---------- */
+.contact-links { display: flex; gap: 24px; margin: 16px 0 0; }
+
+/* ---------- Vistas previas de la presentación ---------- */
+.peek { position: fixed; left: 0; top: 0; z-index: 20; pointer-events: none; }
+.peek-item {
+  position: absolute; left: 0; top: 0; width: 260px;
+  background: var(--card); border-radius: 14px; padding: 10px;
+  box-shadow: 0 0 0 1px oklch(0 0 0 / .05), 0 12px 32px oklch(0 0 0 / .12);
+  opacity: 0; scale: .96; transform-origin: 0 0;
+  transition: opacity .15s ease-out, scale .15s ease-out;
+}
+.peek-item.on { opacity: 1; scale: 1; }
+.peek-item p { margin: 8px 4px 2px; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+.peek-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; border-radius: 8px; filter: grayscale(1); }
+.peek-item .peek-big { margin: 6px 4px 0; font: 500 44px/1 var(--display); color: var(--ink); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.mini-comp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.mini-comp span { font-size: 12px; text-align: center; padding: 10px 0; border-radius: 8px; background: var(--bg); }
+
+@media (hover: hover) and (pointer: fine) {
+  .toc a:hover { color: var(--ink); }
+  .case:hover { box-shadow: 0 0 0 1px oklch(0 0 0 / .06), 0 10px 30px oklch(0 0 0 / .08); }
+}
+
+@media (max-width: 900px) {
+  .bio { margin-top: 12vh; padding-top: 0; }
+  .toc { margin-top: 28px; }
+  .main { padding-top: 72px; }
+  .main section + section { margin-top: 88px; }
+  .index li { grid-template-columns: 1fr auto; gap: 2px 12px; }
+  .index time { grid-column: 2; grid-row: 1; }
+  .index li > span { grid-column: 1 / -1; }
+  .peek-item { position: fixed; left: 18px; right: 18px; top: auto; bottom: 18px; width: auto; }
+}
