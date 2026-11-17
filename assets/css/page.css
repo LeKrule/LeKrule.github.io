@@ -1,5 +1,4 @@
 /* Páginas interiores: casos de estudio y Sobre mí */
-.page .layout { grid-template-columns: minmax(320px, 4fr) minmax(0, 8fr); }
 
 .side-body { margin-top: clamp(24px, 14vh, 160px); }
 .side-body:has(.portrait) { margin-top: clamp(20px, 5vh, 56px); }
@@ -104,7 +103,6 @@
 }
 
 @media (max-width: 900px) {
-  .page .layout { grid-template-columns: 1fr; }
   .side-body { margin-top: 12vh; }
   .toc-v { display: none; }
   .main { padding-top: 48px; }

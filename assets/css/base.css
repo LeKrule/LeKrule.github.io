@@ -39,7 +39,7 @@ p, li { text-wrap: pretty; }
 .label { margin: 0 0 16px; font: 500 16px/1.4 var(--sans); }
 
 /* ---------- Estructura: columna fija a la izquierda, contenido a la derecha ---------- */
-.layout { display: grid; grid-template-columns: minmax(320px, 5fr) minmax(0, 7fr); gap: 56px; max-width: 1360px; margin: 0 auto; padding: 0 40px; }
+.layout { display: grid; grid-template-columns: minmax(320px, 4fr) minmax(0, 8fr); gap: 56px; max-width: 1360px; margin: 0 auto; padding: 0 40px; }
 .side { position: sticky; top: 0; height: 100svh; overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; padding: 32px 0 36px; }
 .side::-webkit-scrollbar { display: none; }
 .side-top { display: flex; justify-content: space-between; align-items: center; }
