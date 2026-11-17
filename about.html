@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Adrián Medina">
   <meta property="og:locale" content="en_GB">
   <meta property="og:locale:alternate" content="es_ES">
-  <meta name="theme-color" content="#f2f0eb">
+  <meta name="theme-color" content="#f2f3f5">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfilePage", "url": "https://adrianmedina.design/about.html", "name": "About Adrián Medina", "mainEntity": {"@type": "Person", "name": "Adrián Medina", "url": "https://adrianmedina.design/", "image": "https://adrianmedina.design/assets/img/adrian.jpg", "jobTitle": "Product Designer", "worksFor": {"@type": "Organization", "name": "Anexia"}, "alumniOf": [{"@type": "EducationalOrganization", "name": "Neoland"}, {"@type": "EducationalOrganization", "name": "Pearson College London"}, {"@type": "EducationalOrganization", "name": "CEV Madrid"}], "address": {"@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES"}, "knowsLanguage": ["es", "en"], "sameAs": ["https://www.linkedin.com/in/adrian-medina-sanchez/"]}}</script>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image:alt" content="Adrián Medina — Product designer making complex tools feel simple.">
@@ -30,41 +30,29 @@
   <script>(()=>{const s=localStorage.getItem("lang");document.documentElement.dataset.lang=s||(navigator.language.startsWith("es")?"es":"en");document.documentElement.lang=document.documentElement.dataset.lang})()</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..600&family=Funnel+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/page.css">
 </head>
-<body>
-  <canvas id="field" aria-hidden="true"></canvas>
-
-  <header class="header">
-    <a class="brand" href="./">Adrián Medina</a>
-    <nav class="nav" aria-label="Main">
-      <a href="./"><span data-l="en">Work</span><span data-l="es">Trabajo</span></a>
-      <a href="about.html" aria-current="page"><span data-l="en">About</span><span data-l="es">Sobre mí</span></a>
-      <a href="#contact"><span data-l="en">Contact</span><span data-l="es">Contacto</span></a>
-    </nav>
-    <div class="tools">
-      <span class="clock mono"></span>
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-set="en">EN</button><button type="button" data-set="es">ES</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap about-hero">
-    <div class="about-grid">
-      <figure class="portrait reveal">
+<body class="page">
+  <div class="layout">
+    <aside class="side">
+      <div class="side-top"><a class="me" href="./">Adrián Medina</a><div class="lang" role="group" aria-label="Language"><button type="button" data-set="en">EN</button><button type="button" data-set="es">ES</button></div></div>
+      <div class="side-body">
+        <a class="back" href="./"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4.5 2.5 8 6 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8h7.5A3 3 0 0 0 13.5 5V3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span data-l="es">Inicio</span><span data-l="en">Index</span></a>
+        <figure class="portrait">
         <img decoding="async" width="800" height="800" src="assets/img/adrian.jpg" alt="Portrait of Adrián Medina">
-        <figcaption class="mono"><span>Madrid</span><span>Adrián Medina</span></figcaption>
       </figure>
-
-      <div>
-        <h1 class="lead reveal" data-l="en">I work between what people need and what is <span class="serif">possible</span> to build.</h1>
-        <h1 class="lead reveal" data-l="es">Trabajo entre lo que la gente necesita y lo que es <span class="serif">posible</span> construir.</h1>
-
-        <div class="prose reveal">
-          <p data-l="en">I came to design through photography, where I realised that what I enjoyed most was editing and spending hours on every detail. I learned to code so I could bring that sensibility into technology, and that mix of visual eye and technical understanding is still how I work today.</p>
-          <p data-l="es">Llegué al diseño desde la fotografía, donde descubrí que lo que más disfrutaba era editar y pasar horas con cada detalle. Aprendí a programar para llevar esa sensibilidad a la tecnología, y esa mezcla de ojo visual y entendimiento técnico sigue siendo mi forma de trabajar.</p>
+        <h1 class="lead" data-l="en">I work between what people need and what is possible to build.</h1>
+        <h1 class="lead" data-l="es">Trabajo entre lo que la gente necesita y lo que es posible construir.</h1>
+        <nav class="toc-v" aria-label="Sections"><a href="#about"><span data-l="en">About</span><span data-l="es">Sobre mí</span></a><a href="#experience"><span data-l="en">Experience</span><span data-l="es">Experiencia</span></a><a href="#education"><span data-l="en">Education</span><span data-l="es">Formación</span></a><a href="#toolkit"><span data-l="en">Toolkit</span><span data-l="es">Herramientas</span></a><a href="#contact"><span data-l="en">Contact</span><span data-l="es">Contacto</span></a></nav>
+      </div>
+    </aside>
+    <main class="main">
+      <section id="about">
+        <div class="card prose">
+          <p data-l="en">I came to design through photography, where I realised that what I enjoyed most was editing and spending hours on every detail. That attention to detail is still how I work today.</p>
+          <p data-l="es">Llegué al diseño desde la fotografía, donde descubrí que lo que más disfrutaba era editar y pasar horas con cada detalle. Esa atención al detalle sigue siendo mi forma de trabajar.</p>
 
           <p data-l="en">At <strong>Anexia</strong> I co-created, with another designer, a multi-brand design system for three very different products that share the same essence. It is already the foundation of two of them, used every day by designers and developers, and the public website is moving onto it. I also designed the logos of two of those products. I also take an active part in product decisions. Before that, at Nurun, I built the design systems for <strong>Moeve</strong> and the pixel-perfect iconography for <strong>Iberdrola</strong>'s new visual identity, and on a public health project at <strong>Fujitsu</strong>.</p>
           <p data-l="es">En <strong>Anexia</strong> he creado, junto a otra diseñadora, un design system multimarca para tres productos muy distintos que comparten una misma esencia. Ya es la base de dos de ellos, lo usan cada día diseñadores y desarrolladores, y la web pública se está migrando a él. También diseñé los logos de dos de esos productos. Además, participo de forma activa en las decisiones de producto. Antes, en Nurun, creé los design systems de <strong>Moeve</strong> y la iconografía pixel-perfect de <strong>Iberdrola</strong> para su nueva identidad visual, y en un proyecto de salud pública en <strong>Fujitsu</strong>.</p>
@@ -72,67 +60,59 @@
           <p data-l="en">I'm systematic, I like bringing order to complicated things, and I enjoy understanding everyone involved, from users to developers. UI, research and design systems are what I enjoy most. I'm drawn to functional design, where nothing is there just for the sake of it.</p>
           <p data-l="es">Soy sistemático, me gusta ordenar lo complicado y entender a todas las partes, de los usuarios a los desarrolladores. Lo que más disfruto es la UI, la investigación y los design systems. Me atrae el diseño funcional, donde nada está por estar.</p>
         </div>
-
-        <a class="link-arrow reveal" href="assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener"><span data-l="en">Download résumé</span><span data-l="es">Descargar CV</span> <span class="arr">↗</span></a>
-
-        <!-- EXPERIENCIA -->
-        <section class="cv-block reveal">
-          <h3><span data-l="en">Experience</span><span data-l="es">Experiencia</span><span class="mono">2019 — <span data-l="en">Now</span><span data-l="es">Hoy</span></span></h3>
+        <a class="ul resume-link" href="assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener"><span data-l="en">Download résumé (PDF)</span><span data-l="es">Descargar CV (PDF)</span></a>
+      </section>
+      <section class="cv-block" id="experience">
+          <h2 class="label"><span data-l="en">Experience</span><span data-l="es">Experiencia</span><span class="meta">2019–<span data-l="en">Now</span><span data-l="es">Hoy</span></span></h2>
           <ul class="rows">
             <li>
-              <span><span class="role">Product Designer</span> <span class="where">· Anexia</span></span>
-              <span class="when mono">Sep 2025 — <span data-l="en">Now</span><span data-l="es">Hoy</span></span>
+              <span><span class="role">Product Designer</span> <span class="where">Anexia</span></span>
+              <span class="when meta">Sep 2025–<span data-l="en">Now</span><span data-l="es">Hoy</span></span>
               <span class="desc" data-l="en">Co-created multi-brand design system (3 brands, ~100 components): the base of two products, migration under way on the third. Logos for two products. End-to-end design of an internal SaaS tool and N0–N2 process mapping.</span>
               <span class="desc" data-l="es">Design system multimarca co-creado (3 marcas, ~100 componentes): base de dos productos y en migración en el tercero. Logos de dos productos. Diseño integral de una herramienta SaaS interna y mapeo de procesos N0–N2.</span>
             </li>
             <li>
-              <span><span class="role">UX/UI Designer</span> <span class="where">· Nurun</span></span>
-              <span class="when mono">Nov 2024 — Jun 2025</span>
+              <span><span class="role">UX/UI Designer</span> <span class="where">Nurun</span></span>
+              <span class="when meta">Nov 2024–Jun 2025</span>
               <span class="desc" data-l="en">Two design systems for Moeve (web modules and newsletters). Pixel-perfect iconography and infographics for Iberdrola's new visual identity. Projects for ESERP, Ilunion and Mondelez with LaLiga.</span>
               <span class="desc" data-l="es">Dos design systems para Moeve (módulos web y newsletters). Iconografía pixel-perfect e infografías para la nueva identidad visual de Iberdrola. Proyectos para ESERP, Ilunion y Mondelez con LaLiga.</span>
             </li>
             <li>
-              <span><span class="role">UX/UI Designer</span> <span class="where">· Fujitsu</span></span>
-              <span class="when mono">May 2023 — May 2024</span>
+              <span><span class="role">UX/UI Designer</span> <span class="where">Fujitsu</span></span>
+              <span class="when meta">May 2023–May 2024</span>
               <span class="desc" data-l="en">Led UX/UI on major projects, including a government health initiative. Usability testing and close work with front-end teams.</span>
               <span class="desc" data-l="es">Responsable de UX/UI en proyectos grandes, entre ellos una iniciativa de salud pública. Tests de usabilidad y trabajo estrecho con front-end.</span>
             </li>
             <li>
-              <span><span class="role">Front-end Developer</span> <span class="where">· Kerox</span></span>
-              <span class="when mono">Nov 2022 — May 2023</span>
+              <span><span class="role">Front-end Developer</span> <span class="where">Kerox</span></span>
+              <span class="when meta">Nov 2022–May 2023</span>
               <span class="desc" data-l="en">Designed and built interfaces for a health product, from Figma prototype to Angular.</span>
               <span class="desc" data-l="es">Diseño y desarrollo de interfaces para un producto de salud, del prototipo en Figma a Angular.</span>
             </li>
             <li>
-              <span><span class="role">UX/UI Designer Intern</span> <span class="where">· Athagon</span></span>
-              <span class="when mono">Jun 2022 — Nov 2022</span>
+              <span><span class="role">UX/UI Designer Intern</span> <span class="where">Athagon</span></span>
+              <span class="when meta">Jun 2022–Nov 2022</span>
               <span class="desc" data-l="en">Designed and built the company's main website.</span>
               <span class="desc" data-l="es">Diseño y desarrollo de la web principal de la empresa.</span>
             </li>
             <li>
-              <span><span class="role"><span data-l="en">Graphic Designer</span><span data-l="es">Diseñador gráfico</span></span> <span class="where">· Freelance</span></span>
-              <span class="when mono">2019 — 2022</span>
+              <span><span class="role"><span data-l="en">Graphic Designer</span><span data-l="es">Diseñador gráfico</span></span> <span class="where">Freelance</span></span>
+              <span class="when meta">2019–2022</span>
               <span class="desc" data-l="en">Visual identities for musical artists.</span>
               <span class="desc" data-l="es">Identidades visuales para artistas musicales.</span>
             </li>
           </ul>
-        </section>
-
-        <!-- FORMACIÓN -->
-        <section class="cv-block reveal">
-          <h3><span data-l="en">Education</span><span data-l="es">Formación</span><span class="mono">2020 — 2025</span></h3>
+        </section><section class="cv-block" id="education">
+          <h2 class="label"><span data-l="en">Education</span><span data-l="es">Formación</span><span class="meta">2020–2025</span></h2>
           <ul class="rows">
-            <li><span><span class="role">Bootcamp in Product Design</span> <span class="where">· Neoland</span></span><span class="when mono">2024</span></li>
-            <li><span><span class="role">HND in Computing</span> <span class="where">· Pearson College</span></span><span class="when mono">2020 — 22</span></li>
-            <li><span><span class="role"><span data-l="en">Higher Vocational Training in App Development</span><span data-l="es">CFGS en Desarrollo de Aplicaciones</span></span> <span class="where">· CEV Madrid</span></span><span class="when mono">2020 — 22</span></li>
-            <li><span><span class="role">Introduction to Web Accessibility</span> <span class="where">· edX</span></span><span class="when mono">2025</span></li>
-            <li><span><span class="role">Advanced UI Design</span> <span class="where">· LinkedIn Learning</span></span><span class="when mono">2024</span></li>
+            <li><span><span class="role">Bootcamp in Product Design</span> <span class="where">Neoland</span></span><span class="when meta">2024</span></li>
+            <li><span><span class="role">HND in Computing</span> <span class="where">Pearson College</span></span><span class="when meta">2020–22</span></li>
+            <li><span><span class="role"><span data-l="en">Higher Vocational Training in App Development</span><span data-l="es">CFGS en Desarrollo de Aplicaciones</span></span> <span class="where">CEV Madrid</span></span><span class="when meta">2020–22</span></li>
+            <li><span><span class="role">Introduction to Web Accessibility</span> <span class="where">edX</span></span><span class="when meta">2025</span></li>
+            <li><span><span class="role">Advanced UI Design</span> <span class="where">LinkedIn Learning</span></span><span class="when meta">2024</span></li>
           </ul>
-        </section>
-
-        <!-- HABILIDADES -->
-        <section class="cv-block reveal">
-          <h3><span data-l="en">Toolkit</span><span data-l="es">Herramientas</span><span class="mono">EN C1 · ES <span data-l="en">Native</span><span data-l="es">Nativo</span></span></h3>
+        </section><section class="cv-block" id="toolkit">
+          <h2 class="label"><span data-l="en">Toolkit</span><span data-l="es">Herramientas</span><span class="meta">EN C1, ES <span data-l="en">Native</span><span data-l="es">Nativo</span></span></h2>
           <div class="tags">
             <span>User Research</span><span>Usability Testing</span><span>Information Architecture</span>
             <span>Interaction Design</span><span>Design Systems</span><span>Process Design</span>
@@ -140,24 +120,17 @@
             <span>Adobe CC</span><span>HTML / CSS</span><span>Visio</span>
           </div>
         </section>
-      </div>
-    </div>
-
-    <section class="closer" id="contact">
-      <h2 data-l="en">Say <span class="serif">hello.</span></h2>
-      <h2 data-l="es">Escríbeme, <span class="serif">hablamos.</span></h2>
-      <a class="mail" href="mailto:adrianmedinasg@gmail.com" data-copy="adrianmedinasg@gmail.com">adrianmedinasg@gmail.com <span class="mail-hint mono"><span class="idle"><span data-l="en">Copy</span><span data-l="es">Copiar</span></span><span class="done"><span data-l="en">Copied ✓</span><span data-l="es">¡Copiado! ✓</span></span></span></a>
-      <footer class="footer mono">
+      <section class="contact" id="contact">
+        <h2 class="label"><span data-l="en">Contact</span><span data-l="es">Contacto</span></h2>
+        <p class="contact-big"><a class="ul" href="mailto:adrianmedinasg@gmail.com" data-copy="adrianmedinasg@gmail.com">adrianmedinasg@gmail.com</a><span class="done"><span data-l="en">Copied</span><span data-l="es">Copiado</span></span></p>
+      </section>
+      <footer class="foot">
         <span>© <span data-year></span> Adrián Medina</span>
-        <nav>
-          <a href="assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener">CV ↗</a>
-          <a href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </nav>
+        <nav><a class="ul" href="assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener">CV</a><a class="ul" href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn</a></nav>
       </footer>
-    </section>
-  </main>
-
-  <script src="assets/js/main.js"></script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b4ddf8878439459380225249ac519185"}'></script><!-- End Cloudflare Web Analytics -->
+    </main>
+  </div>
+  <script src="assets/js/site.js"></script>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b4ddf8878439459380225249ac519185"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
