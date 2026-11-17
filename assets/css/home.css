@@ -4,8 +4,7 @@
 .home .layout { grid-template-columns: minmax(360px, 6fr) minmax(0, 6fr); }
 .home .side-top { justify-content: flex-end; }
 .bio { margin-top: 8px; max-width: 56ch; }
-.bio h1 { margin: 0; font: 500 16px/1.6 var(--sans); }
-.bio .bio-sub { margin: 0 0 20px; color: var(--ink-2); }
+.bio h1 { margin: 0 0 16px; font: 500 16px/1.6 var(--sans); }
 .bio p { margin: 0 0 14px; font-size: 16px; line-height: 1.6; }
 .bio p:last-child { margin-bottom: 0; }
 
