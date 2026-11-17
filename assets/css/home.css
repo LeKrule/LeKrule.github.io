@@ -1,7 +1,7 @@
 /* Portada: presentación, trabajo, experiencia y contacto */
 
 /* Presentación al estilo carta: nombre al tamaño del texto, una línea gris y párrafos cortos */
-.bio { margin-top: 40px; max-width: 56ch; }
+.bio { margin-top: auto; padding-top: 48px; max-width: 56ch; }   /* al pie de la columna */
 .bio h1 { margin: 0 0 16px; font: 500 16px/1.6 var(--sans); }
 .bio p { margin: 0 0 14px; font-size: 16px; line-height: 1.6; }
 .bio p:last-child { margin-bottom: 0; }
