@@ -1,8 +1,11 @@
 /* Portada: presentación, trabajo, experiencia y contacto */
 
-/* Presentación en primera persona, como una carta corta */
-.bio { margin: auto 0 0; padding-top: 48px; max-width: 42ch; }
-.bio h1 { margin: 0 0 22px; font: 450 clamp(26px, 2.3vw, 34px)/1.18 var(--display); letter-spacing: -.02em; }
+/* Presentación al estilo carta: nombre al tamaño del texto, una línea gris y párrafos cortos */
+.home .layout { grid-template-columns: minmax(360px, 6fr) minmax(0, 6fr); }
+.home .side-top { justify-content: flex-end; }
+.bio { margin-top: 8px; max-width: 56ch; }
+.bio h1 { margin: 0; font: 500 16px/1.6 var(--sans); }
+.bio .bio-sub { margin: 0 0 20px; color: var(--ink-2); }
 .bio p { margin: 0 0 14px; font-size: 16px; line-height: 1.6; }
 .bio p:last-child { margin-bottom: 0; }
 
@@ -31,7 +34,6 @@
 .case-text h3 { margin: 0; font: 500 22px/1.2 var(--display); letter-spacing: -.01em; }
 .case-text p { margin: 0; grid-column: 1; color: var(--ink-2); max-width: 56ch; }
 .case-year { grid-column: 2; grid-row: 1; color: var(--ink-2); font-variant-numeric: tabular-nums; }
-.soon .case-text { padding: 12px; }
 
 /* ---------- Experiencia ---------- */
 .index { list-style: none; margin: 0; padding: 0; }
@@ -67,8 +69,8 @@
 }
 
 @media (max-width: 900px) {
-  .bio { margin-top: 12vh; padding-top: 0; }
-  .toc { margin-top: 28px; }
+  .home .layout { grid-template-columns: 1fr; }
+  .toc { margin-top: 32px; }
   .main { padding-top: 72px; }
   .main section + section { margin-top: 88px; }
   .index li { grid-template-columns: 1fr auto; gap: 2px 12px; }

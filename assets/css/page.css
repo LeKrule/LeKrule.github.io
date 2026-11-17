@@ -111,5 +111,8 @@
   .chapter { margin-top: 72px; }
   .stats, .figure-pair { grid-template-columns: 1fr; }
   .prose { padding: 24px 20px; }
+  .prose p { font-size: 16px; }
+  .lead { font-size: 24px; }
+  .portrait { width: min(100%, 240px); }
 }
 .main > .next:first-child { margin-top: 0; }
