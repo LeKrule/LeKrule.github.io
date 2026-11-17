@@ -3,7 +3,7 @@
 /* Presentación al estilo carta: nombre al tamaño del texto, una línea gris y párrafos cortos */
 .home .layout { grid-template-columns: minmax(360px, 6fr) minmax(0, 6fr); }
 .home .side-top { justify-content: flex-end; }
-.bio { margin-top: 8px; max-width: 56ch; }
+.bio { margin-top: auto; padding-top: 48px; max-width: 56ch; }   /* abajo de la columna, como antes */
 .bio h1 { margin: 0 0 16px; font: 500 16px/1.6 var(--sans); }
 .bio p { margin: 0 0 14px; font-size: 16px; line-height: 1.6; }
 .bio p:last-child { margin-bottom: 0; }
