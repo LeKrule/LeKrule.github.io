@@ -29,7 +29,7 @@
   /* ---------- Índice: marca la sección que se está leyendo ----------
      La activa es la última cuyo inicio ya ha pasado del 35 % de la pantalla;
      al llegar al final se marca la última. */
-  const spyLinks = [...document.querySelectorAll(".toc a, .toc-v a")];
+  const spyLinks = [...document.querySelectorAll('.toc a[href^="#"], .toc-v a[href^="#"]')];
   const targets = spyLinks.map((a) => document.getElementById(a.hash.slice(1)));
   if (spyLinks.length && targets.every(Boolean)) {
     let ticking = false;
