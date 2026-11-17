@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Adrián Medina">
   <meta property="og:locale" content="en_GB">
   <meta property="og:locale:alternate" content="es_ES">
-  <meta name="theme-color" content="#f2f0eb">
+  <meta name="theme-color" content="#f2f3f5">
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Namu — case study", "headline": "Namu — Water-saving app case study · Adrián Medina, Product Designer", "description": "Namu case study: an app that makes household water use visible and turns saving it into a habit. A 7-day design sprint by product designer Adrián Medina.", "url": "https://adrianmedina.design/work/namu.html", "image": "https://adrianmedina.design/assets/img/namu/cover.jpg", "about": "App that makes household water use visible", "dateCreated": "2024", "inLanguage": ["en", "es"], "creator": {"@type": "Person", "name": "Adrián Medina", "url": "https://adrianmedina.design/"}, "author": {"@type": "Person", "name": "Adrián Medina", "url": "https://adrianmedina.design/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Work", "item": "https://adrianmedina.design/"}, {"@type": "ListItem", "position": 2, "name": "Namu", "item": "https://adrianmedina.design/work/namu.html"}]}]</script>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image:alt" content="Namu app screens on a deep blue background">
@@ -30,48 +30,36 @@
   <script>(()=>{const s=localStorage.getItem("lang");document.documentElement.dataset.lang=s||(navigator.language.startsWith("es")?"es":"en");document.documentElement.lang=document.documentElement.dataset.lang})()</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..600&family=Funnel+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/page.css">
 </head>
-<body>
-  <canvas id="field" aria-hidden="true"></canvas>
-
-  <header class="header">
-    <a class="brand" href="../">Adrián Medina</a>
-    <nav class="nav" aria-label="Main">
-      <a href="../" aria-current="page"><span data-l="en">Work</span><span data-l="es">Trabajo</span></a>
-      <a href="../about.html"><span data-l="en">About</span><span data-l="es">Sobre mí</span></a>
-      <a href="../about.html#contact"><span data-l="en">Contact</span><span data-l="es">Contacto</span></a>
-    </nav>
-    <div class="tools">
-      <span class="clock mono"></span>
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-set="en">EN</button><button type="button" data-set="es">ES</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap case-hero">
-    <a class="back mono" href="../#work">← <span data-l="en">All work</span><span data-l="es">Todo el trabajo</span></a>
-
-    <h1 class="case-title"><span class="split-line"><span>Namu</span></span></h1>
-    <p class="case-sub reveal">
+<body class="page">
+  <div class="layout">
+    <aside class="side">
+      <div class="side-top"><a class="me" href="../">Adrián Medina</a><div class="lang" role="group" aria-label="Language"><button type="button" data-set="en">EN</button><button type="button" data-set="es">ES</button></div></div>
+      <div class="side-body">
+        <a class="back" href="../"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4.5 2.5 8 6 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8h7.5A3 3 0 0 0 13.5 5V3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span data-l="es">Inicio</span><span data-l="en">Index</span></a>
+        <h1 class="case-title">Namu</h1>
+        <p class="case-sub">
       <span data-l="en">Making household water use visible, and saving it a habit.</span>
       <span data-l="es">Hacer visible el consumo de agua en casa y convertir el ahorro en hábito.</span>
     </p>
-
-    <div class="case-meta reveal">
-      <div><span class="mono"><span data-l="en">Role</span><span data-l="es">Rol</span></span><span>Product Designer</span></div>
-      <div><span class="mono"><span data-l="en">Year</span><span data-l="es">Año</span></span><span>2024</span></div>
-      <div><span class="mono"><span data-l="en">Format</span><span data-l="es">Formato</span></span><span><span data-l="en">7-day design sprint · Team</span><span data-l="es">Design sprint de 7 días · Equipo</span></span></div>
-      <div><span class="mono"><span data-l="en">Tools</span><span data-l="es">Herramientas</span></span><span>Figma</span></div>
+        <div class="case-meta">
+      <div><span class="meta"><span data-l="en">Role</span><span data-l="es">Rol</span></span><span>Product Designer</span></div>
+      <div><span class="meta"><span data-l="en">Year</span><span data-l="es">Año</span></span><span>2024</span></div>
+      <div><span class="meta"><span data-l="en">Format</span><span data-l="es">Formato</span></span><span><span data-l="en">7-day design sprint, Team</span><span data-l="es">Design sprint de 7 días, Equipo</span></span></div>
+      <div><span class="meta"><span data-l="en">Tools</span><span data-l="es">Herramientas</span></span><span>Figma</span></div>
     </div>
+        <nav class="toc-v" aria-label="Chapters"><a href="#c1"><span data-l="en">Context</span><span data-l="es">Contexto</span></a><a href="#c2"><span data-l="en">Challenge</span><span data-l="es">Reto</span></a><a href="#c3"><span data-l="en">The sprint</span><span data-l="es">El sprint</span></a><a href="#c4"><span data-l="en">Solution</span><span data-l="es">Solución</span></a><a href="#c5"><span data-l="en">Takeaways</span><span data-l="es">Aprendizajes</span></a></nav>
+      </div>
+    </aside>
+    <main class="main">
+    <figure class="card case-cover"><img fetchpriority="high" width="1800" height="1134" src="../assets/img/namu/cover.jpg" alt="Overview of Namu app screens"></figure>
 
-    <figure class="case-cover"><img fetchpriority="high" width="1800" height="1134" src="../assets/img/namu/cover.jpg" alt="Overview of Namu app screens"></figure>
-
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">01</span><h2><span data-l="en">Context</span><span data-l="es">Contexto</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c1">
+      <h2><span data-l="en">Context</span><span data-l="es">Contexto</span></h2>
+      <div class="chapter-body">
         <p class="big" data-l="en">Water is getting scarcer, but at home it still feels unlimited, because nobody sees how much they use.</p>
         <p class="big" data-l="es">El agua es cada vez más escasa, pero en casa sigue pareciendo ilimitada, porque nadie ve cuánta gasta.</p>
         <p data-l="en">Population growth, urbanisation and climate change are pushing demand up. Namu began as a team project driven by a shared concern: domestic water waste, and how little most people know about their own consumption.</p>
@@ -79,17 +67,17 @@
       </div>
     </section>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">02</span><h2><span data-l="en">Challenge</span><span data-l="es">Reto</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c2">
+      <h2><span data-l="en">Challenge</span><span data-l="es">Reto</span></h2>
+      <div class="chapter-body">
         <p data-l="en">Reduce household water consumption by making it visible, then keep people motivated long enough for saving to become a habit.</p>
         <p data-l="es">Reducir el consumo de agua en casa haciéndolo visible y mantener la motivación el tiempo suficiente para que ahorrar se convierta en hábito.</p>
       </div>
     </section>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">03</span><h2><span data-l="en">The sprint</span><span data-l="es">El sprint</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c3">
+      <h2><span data-l="en">The sprint</span><span data-l="es">El sprint</span></h2>
+      <div class="chapter-body">
         <ol class="steps">
           <li><div><strong><span data-l="en">Kickoff and research</span><span data-l="es">Kickoff e investigación</span></strong>
             <p data-l="en">Roadmap, goals and desk research on water use and waste.</p>
@@ -113,14 +101,14 @@
       </div>
     </section>
 
-    <figure class="figure reveal">
+    <figure class="card figure">
       <img decoding="async" width="835" height="522" src="../assets/img/namu/persona.jpg" alt="Namu persona: Benito" loading="lazy">
-      <figcaption class="mono"><span data-l="en">Persona: Benito, 22, environmental science student</span><span data-l="es">Persona: Benito, 22 años, estudiante de ciencias ambientales</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Persona: Benito, 22, environmental science student</span><span data-l="es">Persona: Benito, 22 años, estudiante de ciencias ambientales</span></figcaption>
     </figure>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">04</span><h2><span data-l="en">Solution</span><span data-l="es">Solución</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c4">
+      <h2><span data-l="en">Solution</span><span data-l="es">Solución</span></h2>
+      <div class="chapter-body">
         <p data-l="en">Namu tracks consumption in real time, connects to the water bill, and turns saving into personal and shared challenges. Rewards come from partner discounts, and a community area shows that saving is something people do together.</p>
         <p data-l="es">Namu mide el consumo en tiempo real, se conecta a la factura del agua y convierte el ahorro en retos personales y compartidos. Las recompensas son descuentos en comercios asociados, y una zona de comunidad muestra que ahorrar es algo que se hace en grupo.</p>
         <div class="stats">
@@ -131,39 +119,35 @@
       </div>
     </section>
 
-    <figure class="figure reveal">
+    <figure class="card figure">
       <img decoding="async" width="850" height="518" src="../assets/img/namu/screens-1.jpg" alt="Challenge and rewards screens" loading="lazy">
-      <figcaption class="mono"><span data-l="en">Challenges and rewards</span><span data-l="es">Retos y recompensas</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Challenges and rewards</span><span data-l="es">Retos y recompensas</span></figcaption>
     </figure>
-    <figure class="figure reveal">
+    <figure class="card figure">
       <img decoding="async" width="835" height="522" src="../assets/img/namu/screens-2.jpg" alt="Tips and profile screens" loading="lazy">
-      <figcaption class="mono"><span data-l="en">Tips and profile</span><span data-l="es">Consejos y perfil</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Tips and profile</span><span data-l="es">Consejos y perfil</span></figcaption>
     </figure>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">05</span><h2><span data-l="en">Takeaways</span><span data-l="es">Aprendizajes</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c5">
+      <h2><span data-l="en">Takeaways</span><span data-l="es">Aprendizajes</span></h2>
+      <div class="chapter-body">
         <p data-l="en">A tight sprint forces decisions. Research early on shaped which features made the cut, and testing confirmed that seeing consumption in real numbers is what changes behaviour. The economic savings matter as much as the environmental ones.</p>
         <p data-l="es">Un sprint corto obliga a decidir. La investigación del principio marcó qué funcionalidades entraban, y los tests confirmaron que ver el consumo en cifras reales es lo que cambia el comportamiento. El ahorro económico pesa tanto como el medioambiental.</p>
       </div>
     </section>
 
-    <a class="next" href="todoo.html">
-      <span class="mono"><span data-l="en">Next project</span><span data-l="es">Siguiente proyecto</span></span>
-      <span class="next-title">Todoo <span class="arr">→</span></span>
+    <a class="card next" href="todoo.html">
+      <span class="meta"><span data-l="en">Next project</span><span data-l="es">Siguiente proyecto</span></span>
+      <span class="next-title">Todoo</span>
     </a>
 
-    <footer class="footer mono">
-      <span>© <span data-year></span> Adrián Medina</span>
-      <nav>
-        <a href="mailto:adrianmedinasg@gmail.com" data-copy="adrianmedinasg@gmail.com"><span class="idle">Email</span><span class="done"><span data-l="en">Copied ✓</span><span data-l="es">¡Copiado! ✓</span></span></a>
-        <a href="../assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener">CV ↗</a>
-        <a href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </nav>
-    </footer>
-  </main>
-
-  <script src="../assets/js/main.js"></script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b4ddf8878439459380225249ac519185"}'></script><!-- End Cloudflare Web Analytics -->
+    <footer class="foot">
+        <span>© <span data-year></span> Adrián Medina</span>
+        <nav><a class="ul" href="../assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener">CV</a><a class="ul" href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn</a></nav>
+      </footer>
+    </main>
+  </div>
+  <script src="../assets/js/site.js"></script>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b4ddf8878439459380225249ac519185"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

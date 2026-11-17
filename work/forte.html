@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Adrián Medina">
   <meta property="og:locale" content="en_GB">
   <meta property="og:locale:alternate" content="es_ES">
-  <meta name="theme-color" content="#f2f0eb">
+  <meta name="theme-color" content="#f2f3f5">
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Forte — case study", "headline": "Forte — Finance app case study · Adrián Medina, Product Designer", "description": "Forte case study: a concept finance app that teaches you before it lets you invest. Research, UX/UI and brand by Adrián Medina, product designer in Madrid.", "url": "https://adrianmedina.design/work/forte.html", "image": "https://adrianmedina.design/assets/img/forte/cover.jpg", "about": "Concept finance app that teaches people to invest", "dateCreated": "2024", "inLanguage": ["en", "es"], "creator": {"@type": "Person", "name": "Adrián Medina", "url": "https://adrianmedina.design/"}, "author": {"@type": "Person", "name": "Adrián Medina", "url": "https://adrianmedina.design/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Work", "item": "https://adrianmedina.design/"}, {"@type": "ListItem", "position": 2, "name": "Forte", "item": "https://adrianmedina.design/work/forte.html"}]}]</script>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image:alt" content="Forte app screens on a lilac background">
@@ -30,65 +30,53 @@
   <script>(()=>{const s=localStorage.getItem("lang");document.documentElement.dataset.lang=s||(navigator.language.startsWith("es")?"es":"en");document.documentElement.lang=document.documentElement.dataset.lang})()</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..600&family=Funnel+Sans:wght@400..700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/page.css">
 </head>
-<body>
-  <canvas id="field" aria-hidden="true"></canvas>
-
-  <header class="header">
-    <a class="brand" href="../">Adrián Medina</a>
-    <nav class="nav" aria-label="Main">
-      <a href="../" aria-current="page"><span data-l="en">Work</span><span data-l="es">Trabajo</span></a>
-      <a href="../about.html"><span data-l="en">About</span><span data-l="es">Sobre mí</span></a>
-      <a href="../about.html#contact"><span data-l="en">Contact</span><span data-l="es">Contacto</span></a>
-    </nav>
-    <div class="tools">
-      <span class="clock mono"></span>
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-set="en">EN</button><button type="button" data-set="es">ES</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap case-hero">
-    <a class="back mono" href="../#work">← <span data-l="en">All work</span><span data-l="es">Todo el trabajo</span></a>
-
-    <h1 class="case-title"><span class="split-line"><span>Forte</span></span></h1>
-    <p class="case-sub reveal">
+<body class="page">
+  <div class="layout">
+    <aside class="side">
+      <div class="side-top"><a class="me" href="../">Adrián Medina</a><div class="lang" role="group" aria-label="Language"><button type="button" data-set="en">EN</button><button type="button" data-set="es">ES</button></div></div>
+      <div class="side-body">
+        <a class="back" href="../"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4.5 2.5 8 6 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8h7.5A3 3 0 0 0 13.5 5V3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span data-l="es">Inicio</span><span data-l="en">Index</span></a>
+        <h1 class="case-title">Forte</h1>
+        <p class="case-sub">
       <span data-l="en">A finance app that teaches you before it lets you invest.</span><span data-l="es">Una app de finanzas que te enseña antes de dejarte invertir.</span>
     </p>
-
-    <div class="case-meta reveal">
-      <div><span class="mono"><span data-l="en">Role</span><span data-l="es">Rol</span></span><span><span data-l="en">Product Designer · solo</span><span data-l="es">Product Designer · en solitario</span></span></div>
-      <div><span class="mono"><span data-l="en">Context</span><span data-l="es">Contexto</span></span><span><span data-l="en">Final project, Product Design Bootcamp (Neoland)</span><span data-l="es">Proyecto final, Bootcamp de Product Design (Neoland)</span></span></div>
-      <div><span class="mono"><span data-l="en">Year</span><span data-l="es">Año</span></span><span>2024</span></div>
-      <div><span class="mono"><span data-l="en">Scope</span><span data-l="es">Alcance</span></span><span><span data-l="en">Research, UX/UI, branding, logo animation</span><span data-l="es">Research, UX/UI, marca, animación del logo</span></span></div>
+        <div class="case-meta">
+      <div><span class="meta"><span data-l="en">Role</span><span data-l="es">Rol</span></span><span><span data-l="en">Product Designer, solo</span><span data-l="es">Product Designer, en solitario</span></span></div>
+      <div><span class="meta"><span data-l="en">Context</span><span data-l="es">Contexto</span></span><span><span data-l="en">Final project, Product Design Bootcamp (Neoland)</span><span data-l="es">Proyecto final, Bootcamp de Product Design (Neoland)</span></span></div>
+      <div><span class="meta"><span data-l="en">Year</span><span data-l="es">Año</span></span><span>2024</span></div>
+      <div><span class="meta"><span data-l="en">Scope</span><span data-l="es">Alcance</span></span><span><span data-l="en">Research, UX/UI, branding, logo animation</span><span data-l="es">Research, UX/UI, marca, animación del logo</span></span></div>
     </div>
+        <nav class="toc-v" aria-label="Chapters"><a href="#c1"><span data-l="en">The problem</span><span data-l="es">El problema</span></a><a href="#c2">Research</a><a href="#c3"><span data-l="en">Learn first</span><span data-l="es">Primero, aprender</span></a><a href="#c4"><span data-l="en">Goals you can picture</span><span data-l="es">Objetivos que puedes imaginar</span></a><a href="#c5"><span data-l="en">Designed for trust</span><span data-l="es">Diseñada para dar confianza</span></a><a href="#c6"><span data-l="en">Brand</span><span data-l="es">Marca</span></a><a href="#c7"><span data-l="en">Looking back</span><span data-l="es">Mirando atrás</span></a></nav>
+      </div>
+    </aside>
+    <main class="main">
+    <figure class="card case-cover"><img fetchpriority="high" width="1500" height="996" src="../assets/img/forte/cover.jpg" alt="Forte app on two phones"></figure>
 
-    <figure class="case-cover"><img fetchpriority="high" width="1500" height="996" src="../assets/img/forte/cover.jpg" alt="Forte app on two phones"></figure>
-
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">01</span><h2><span data-l="en">The problem</span><span data-l="es">El problema</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c1">
+      <h2><span data-l="en">The problem</span><span data-l="es">El problema</span></h2>
+      <div class="chapter-body">
         <p class="big" data-l="en">Everyone tells you to invest. Almost nobody explains the risks, or how to start.</p>
         <p class="big" data-l="es">Todo el mundo te dice que inviertas. Casi nadie te explica los riesgos, ni cómo empezar.</p>
         <p data-l="en">We are surrounded by messages about investing, crypto and passive income, but very few people understand what they are getting into. I chose this topic for my final bootcamp project because I kept seeing the same gap: people want to do something with their money and don’t know where to begin.</p>
         <p data-l="es">Vivimos rodeados de mensajes sobre invertir, criptomonedas e ingresos pasivos, pero muy poca gente entiende en qué se mete. Elegí este tema para mi proyecto final del bootcamp porque veía siempre la misma carencia: la gente quiere hacer algo con su dinero y no sabe por dónde empezar.</p>
-        <p class="mono muted"><span data-l="en">Concept project · designed end to end on my own</span><span data-l="es">Proyecto conceptual · diseñado de principio a fin en solitario</span></p>
+        <p class="meta muted"><span data-l="en">Concept project, designed end to end on my own</span><span data-l="es">Proyecto conceptual, diseñado de principio a fin en solitario</span></p>
       </div>
     </section>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">02</span><h2>Research</h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c2">
+      <h2>Research</h2>
+      <div class="chapter-body">
         <div class="stats">
           <div><b>~30</b><span><span data-l="en">survey responses (Google Forms)</span><span data-l="es">respuestas a la encuesta (Google Forms)</span></span></div>
           <div><b>5</b><span><span data-l="en">interviews with different profiles</span><span data-l="es">entrevistas a perfiles distintos</span></span></div>
           <div><b>5</b><span><span data-l="en">users tested the prototype</span><span data-l="es">usuarios probaron el prototipo</span></span></div>
         </div>
-        <p data-l="en" style="margin-top:32px">Two findings shaped the whole product:</p>
-        <p data-l="es" style="margin-top:32px">Dos hallazgos marcaron todo el producto:</p>
+        <p class="lead-in" data-l="en">Two findings shaped the whole product:</p>
+        <p class="lead-in" data-l="es">Dos hallazgos marcaron todo el producto:</p>
         <ol class="steps">
           <li><div><strong><span data-l="en">People don’t understand the risks</span><span data-l="es">La gente no entiende los riesgos</span></strong>
             <p data-l="en">They had heard of investing, crypto or compound interest, but couldn’t explain what could go wrong.</p>
@@ -100,98 +88,94 @@
       </div>
     </section>
 
-    <figure class="figure reveal">
+    <figure class="card figure">
       <div class="figure-pair">
         <img decoding="async" width="835" height="522" src="../assets/img/forte/persona.jpg" alt="Forte user persona" loading="lazy">
         <img decoding="async" width="835" height="522" src="../assets/img/forte/archetypes.jpg" alt="Forte user archetypes" loading="lazy">
       </div>
-      <figcaption class="mono"><span data-l="en">Persona and archetypes from the research</span><span data-l="es">Persona y arquetipos de la investigación</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Persona and archetypes from the research</span><span data-l="es">Persona y arquetipos de la investigación</span></figcaption>
     </figure>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">03</span><h2><span data-l="en">Learn first</span><span data-l="es">Primero, aprender</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c3">
+      <h2><span data-l="en">Learn first</span><span data-l="es">Primero, aprender</span></h2>
+      <div class="chapter-body">
         <p class="big" data-l="en">If people don’t understand the risks, the app should teach before it sells.</p>
         <p class="big" data-l="es">Si la gente no entiende los riesgos, la app debe enseñar antes de vender.</p>
         <p data-l="en">Learning is organised in knowledge levels by topic: financial fundamentals, budgeting, crypto, investing for beginners, debt and retirement. Each one has short videos, so you can progress at your own pace before putting real money in.</p>
         <p data-l="es">El aprendizaje se organiza en niveles de conocimiento por tema: fundamentos financieros, presupuestos, criptomonedas, inversión para principiantes, deudas y jubilación. Cada uno tiene vídeos cortos, para avanzar a tu ritmo antes de poner dinero real.</p>
       </div>
     </section>
-    <figure class="figure reveal">
+    <figure class="card figure">
       <img decoding="async" width="2400" height="1350" src="../assets/img/forte/learn.jpg" alt="Forte course screens: financial fundamentals, crypto, investing and retirement" loading="lazy">
-      <figcaption class="mono"><span data-l="en">Knowledge levels by topic, with videos</span><span data-l="es">Niveles de conocimiento por tema, con vídeos</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Knowledge levels by topic, with videos</span><span data-l="es">Niveles de conocimiento por tema, con vídeos</span></figcaption>
     </figure>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">04</span><h2><span data-l="en">Goals you can picture</span><span data-l="es">Objetivos que puedes imaginar</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c4">
+      <h2><span data-l="en">Goals you can picture</span><span data-l="es">Objetivos que puedes imaginar</span></h2>
+      <div class="chapter-body">
         <p data-l="en">Saving works better with a reason. You create goals like a car or a house deposit, and the app shows your progress as a percentage, not as a spreadsheet. It is the gamified side of Forte: small, visible wins that keep you going.</p>
         <p data-l="es">Ahorrar funciona mejor con un motivo. Creas objetivos como un coche o la entrada de una casa, y la app muestra tu progreso en porcentaje, no como una hoja de cálculo. Es la parte gamificada de Forte: pequeños logros visibles que te animan a seguir.</p>
       </div>
     </section>
-    <figure class="figure reveal">
+    <figure class="card figure">
       <img decoding="async" width="2400" height="1350" src="../assets/img/forte/goals.jpg" alt="Forte home, goals overview and create-goal screens" loading="lazy">
-      <figcaption class="mono"><span data-l="en">Home, goals and creating a new goal</span><span data-l="es">Inicio, objetivos y creación de un objetivo</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Home, goals and creating a new goal</span><span data-l="es">Inicio, objetivos y creación de un objetivo</span></figcaption>
     </figure>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">05</span><h2><span data-l="en">Designed for trust</span><span data-l="es">Diseñada para dar confianza</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c5">
+      <h2><span data-l="en">Designed for trust</span><span data-l="es">Diseñada para dar confianza</span></h2>
+      <div class="chapter-body">
         <p data-l="en">Because people didn’t trust finance apps, I avoided anything that felt like a game of chance: a sober, professional dark interface, clear numbers, and buy and sell actions that are visible but never pushy. Investing sits next to everyday money, so it feels like part of managing your finances, not a separate bet.</p>
         <p data-l="es">Como la gente no se fiaba de las apps financieras, evité todo lo que pareciera un juego de azar: una interfaz oscura, sobria y profesional, cifras claras y acciones de compra y venta visibles pero nunca insistentes. La inversión convive con el dinero del día a día, para que se sienta parte de gestionar tus finanzas y no una apuesta aparte.</p>
       </div>
     </section>
-    <figure class="figure reveal">
+    <figure class="card figure">
       <img decoding="async" width="2400" height="1350" src="../assets/img/forte/invest.jpg" alt="Forte investment screens: assets, chart and market search" loading="lazy">
-      <figcaption class="mono"><span data-l="en">Investing: assets, detail and market</span><span data-l="es">Inversión: activos, detalle y mercado</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Investing: assets, detail and market</span><span data-l="es">Inversión: activos, detalle y mercado</span></figcaption>
     </figure>
-    <figure class="figure reveal">
+    <figure class="card figure">
       <img decoding="async" width="2400" height="1350" src="../assets/img/forte/everyday.jpg" alt="Forte wallet and transfer screens" loading="lazy">
-      <figcaption class="mono"><span data-l="en">Everyday money: wallet and transfers</span><span data-l="es">Dinero del día a día: cartera y transferencias</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Everyday money: wallet and transfers</span><span data-l="es">Dinero del día a día: cartera y transferencias</span></figcaption>
     </figure>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">06</span><h2><span data-l="en">Brand</span><span data-l="es">Marca</span></h2></div>
-      <div class="chapter-body reveal">
+    <section class="chapter" id="c6">
+      <h2><span data-l="en">Brand</span><span data-l="es">Marca</span></h2>
+      <div class="chapter-body">
         <p data-l="en">I also designed Forte’s identity: a logo built from connected shapes, a palette of lilac, aqua, lime and amber on dark, and a short logo animation for the app launch.</p>
         <p data-l="es">También diseñé la identidad de Forte: un logo construido con formas conectadas, una paleta de lila, aguamarina, lima y ámbar sobre fondo oscuro, y una pequeña animación del logo para el arranque de la app.</p>
       </div>
     </section>
-    <figure class="figure figure-video reveal">
+    <figure class="card figure figure-video">
       <div class="video-panel">
         <video src="../assets/img/forte/logo-animation.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Forte logo animation"></video>
       </div>
-      <figcaption class="mono"><span data-l="en">Logo animation for the app launch</span><span data-l="es">Animación del logo para el arranque de la app</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Logo animation for the app launch</span><span data-l="es">Animación del logo para el arranque de la app</span></figcaption>
     </figure>
-    <figure class="figure reveal">
+    <figure class="card figure">
       <img decoding="async" width="2400" height="1350" src="../assets/img/forte/onboarding.jpg" alt="Forte splash screen with logo, login and sign-up" loading="lazy">
-      <figcaption class="mono"><span data-l="en">Splash, log in and sign up</span><span data-l="es">Arranque, inicio de sesión y registro</span></figcaption>
+      <figcaption class="meta"><span data-l="en">Splash, log in and sign up</span><span data-l="es">Arranque, inicio de sesión y registro</span></figcaption>
     </figure>
 
-    <section class="chapter">
-      <div class="chapter-label"><span class="mono">07</span><h2><span data-l="en">Looking back</span><span data-l="es">Mirando atrás</span></h2></div>
-      <div class="chapter-body reveal">
-        <p data-l="en">Forte taught me to start from a real problem and let research drive every decision. If I designed it today, I would build a design system from day one, as I now do professionally, and polish every detail much further.</p>
-        <p data-l="es">Forte me enseñó a partir de un problema real y a dejar que la investigación guíe cada decisión. Si lo diseñara hoy, crearía un design system desde el primer día, como hago ahora en mi trabajo, y puliría mucho más cada detalle.</p>
+    <section class="chapter" id="c7">
+      <h2><span data-l="en">Looking back</span><span data-l="es">Mirando atrás</span></h2>
+      <div class="chapter-body">
+        <div class="noted"><p data-l="en">Forte taught me to start from a real problem and let research drive every decision. If I designed it today, I would build a design system from day one, as I now do professionally, and polish every detail much further.</p>
+        <p data-l="es">Forte me enseñó a partir de un problema real y a dejar que la investigación guíe cada decisión. Si lo diseñara hoy, crearía un design system desde el primer día, como hago ahora en mi trabajo, y puliría mucho más cada detalle.</p><aside class="note"><svg viewBox="0 0 10 100" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1.5 1.5 C6 2.5 7 5 7 12 L7.4 46 C7.6 49 8.6 50 9.2 50 C8.6 50 7.6 51 7.4 54 L7 88 C7 95 6 97.5 1.5 98.5"/></svg><p data-l="es">Hoy empezaría por el design system.</p><p data-l="en">Today I’d start with the design system.</p></aside></div>
       </div>
     </section>
 
-    <a class="next" href="namu.html">
-      <span class="mono"><span data-l="en">Next project</span><span data-l="es">Siguiente proyecto</span></span>
-      <span class="next-title">Namu <span class="arr">→</span></span>
+    <a class="card next" href="namu.html">
+      <span class="meta"><span data-l="en">Next project</span><span data-l="es">Siguiente proyecto</span></span>
+      <span class="next-title">Namu</span>
     </a>
 
-    <footer class="footer mono">
-      <span>© <span data-year></span> Adrián Medina</span>
-      <nav>
-        <a href="mailto:adrianmedinasg@gmail.com" data-copy="adrianmedinasg@gmail.com"><span class="idle">Email</span><span class="done"><span data-l="en">Copied ✓</span><span data-l="es">¡Copiado! ✓</span></span></a>
-        <a href="../assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener">CV ↗</a>
-        <a href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </nav>
-    </footer>
-  </main>
-
-  <script src="../assets/js/main.js"></script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b4ddf8878439459380225249ac519185"}'></script><!-- End Cloudflare Web Analytics -->
+    <footer class="foot">
+        <span>© <span data-year></span> Adrián Medina</span>
+        <nav><a class="ul" href="../assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener">CV</a><a class="ul" href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn</a></nav>
+      </footer>
+    </main>
+  </div>
+  <script src="../assets/js/site.js"></script>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b4ddf8878439459380225249ac519185"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
