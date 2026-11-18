@@ -1,7 +1,10 @@
-/* Portada: presentación, trabajo, experiencia y contacto */
+/* ==========================================================================
+   Portada: presentación, trabajo, experiencia y contacto.
+   Se apoya en base.css (tokens, estructura de dos columnas, tarjetas).
+   ========================================================================== */
 
-/* Presentación al estilo carta: nombre al tamaño del texto, una línea gris y párrafos cortos */
-.bio { margin-top: auto; padding-top: 48px; max-width: 56ch; }   /* al pie de la columna */
+/* ---------- Presentación (al pie de la columna izquierda) ---------- */
+.bio { margin-top: auto; padding-top: 48px; max-width: 56ch; }
 .bio h1 { margin: 0 0 16px; font: 500 16px/1.6 var(--sans); }
 .bio p { margin: 0 0 14px; font-size: 16px; line-height: 1.6; }
 .bio p:last-child { margin-bottom: 0; }
@@ -13,9 +16,11 @@
   text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
   transition: color .15s ease-out, text-decoration-color .15s ease-out;
 }
-.nw { white-space: nowrap; }   /* el signo no se separa del término */
 .term:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 .term.on { color: var(--accent); text-decoration-color: var(--accent); }
+.nw { white-space: nowrap; }   /* el signo de puntuación no se separa del término */
+
+/* Índice y estado */
 
 .toc { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 40px; }
 .toc a { color: var(--ink-2); transition: color .15s ease-out; }
@@ -62,7 +67,7 @@
 .mini-comp span { font-size: 12px; text-align: center; padding: 10px 0; border-radius: 8px; background: var(--bg); }
 
 @media (hover: hover) and (pointer: fine) {
-  .toc a:hover { color: var(--ink); }
+  .toc a:not(.on):hover { color: #3a3b40; }
   .case:hover { box-shadow: 0 0 0 1px oklch(0 0 0 / .06), 0 10px 30px oklch(0 0 0 / .08); }
 }
 

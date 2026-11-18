@@ -57,7 +57,7 @@ p, li { text-wrap: pretty; }
 html[data-lang="es"] .lang [data-set="es"], html[data-lang="en"] .lang [data-set="en"] { background: var(--ink); color: #fff; }
 
 /* Contacto (portada y Sobre mí) */
-.contact-big { margin: 0; font: 450 clamp(24px, 2.6vw, 34px)/1.2 var(--display); letter-spacing: -.02em; }
+.contact-big { margin: 0; font: 500 16px/1.6 var(--sans); }
 .contact .done { display: none; margin-left: 8px; color: var(--accent); font: 400 14px var(--sans); }
 .contact.copied .done { display: inline; }
 
