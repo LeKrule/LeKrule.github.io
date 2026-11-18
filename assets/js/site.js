@@ -36,7 +36,7 @@
     const spy = () => {
       ticking = false;
       const line = innerHeight * 0.35;
-      let idx = 0;
+      let idx = document.querySelector(".toc") ? 0 : -1;   // en los casos, nada marcado sobre la portada
       targets.forEach((t, i) => { if (t.getBoundingClientRect().top <= line) idx = i; });
       if (innerHeight + scrollY >= root.scrollHeight - 4) idx = targets.length - 1;
       spyLinks.forEach((a, i) => a.classList.toggle("on", i === idx));
