@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-brand design system case study · Adrián Medina</title>
+  <meta name="description" content="Multi-brand design system case study: three brands, 95 component sets and 561 design tokens shared by design and development.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://adrianmedina.design/work/design-system.html">
+  <meta property="og:title" content="Multi-brand design system case study · Adrián Medina">
+  <meta property="og:description" content="Multi-brand design system case study: three brands, 95 component sets and 561 design tokens shared by design and development.">
+  <meta property="og:image" content="https://adrianmedina.design/assets/img/design-system/cover.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1000">
+  <meta property="og:image:alt" content="Three brand themes stacked as layers of one design system">
+  <link rel="canonical" href="https://adrianmedina.design/work/design-system.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Adrián Medina">
+  <meta property="og:site_name" content="Adrián Medina">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="theme-color" content="#f2f3f5">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Multi-brand design system — case study", "headline": "Multi-brand design system case study · Adrián Medina", "description": "Multi-brand design system case study: three brands, 95 component sets and 561 design tokens shared by design and development.", "url": "https://adrianmedina.design/work/design-system.html", "image": "https://adrianmedina.design/assets/img/design-system/cover.jpg", "about": "Multi-brand design system", "dateCreated": "2025", "inLanguage": ["en", "es"], "creator": {"@type": "Person", "name": "Adrián Medina", "url": "https://adrianmedina.design/"}, "author": {"@type": "Person", "name": "Adrián Medina", "url": "https://adrianmedina.design/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Work", "item": "https://adrianmedina.design/"}, {"@type": "ListItem", "position": 2, "name": "Multi-brand design system", "item": "https://adrianmedina.design/work/design-system.html"}]}]</script>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:alt" content="Three brand themes stacked as layers of one design system">
+  <meta name="twitter:image" content="https://adrianmedina.design/assets/img/design-system/cover.jpg">
+  <meta name="twitter:description" content="Multi-brand design system case study: three brands, 95 component sets and 561 design tokens shared by design and development.">
+  <meta name="twitter:title" content="Multi-brand design system case study · Adrián Medina">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <script>(()=>{const s=localStorage.getItem("lang");document.documentElement.dataset.lang=s||(navigator.language.startsWith("es")?"es":"en");document.documentElement.lang=document.documentElement.dataset.lang})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..600&family=Funnel+Sans:wght@400..700&family=Lexend:wght@500&family=Plus+Jakarta+Sans:wght@500&family=Geist:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css?v=14">
+  <link rel="stylesheet" href="../assets/css/page.css?v=14">
+</head>
+<body>
+  <div class="layout">
+    <aside class="side">
+      <div class="side-top"><a class="me" href="../">Adrián Medina</a><div class="lang" role="group" aria-label="Language"><button type="button" data-set="en">EN</button><button type="button" data-set="es">ES</button></div></div>
+      <div class="side-body">
+        <a class="back" href="../"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4.5 2.5 8 6 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8h7.5A3 3 0 0 0 13.5 5V3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span data-l="es">Inicio</span><span data-l="en">Index</span></a>
+        <h1 class="case-title long"><span data-l="en">Multi-brand design system</span><span data-l="es">Design system multimarca</span></h1>
+        <p class="case-sub"><span data-l="en">One system, three brands.</span><span data-l="es">Un sistema, tres marcas.</span></p>
+        <div class="case-meta"><div><span class="meta"><span data-l="en">Role</span><span data-l="es">Rol</span></span><span><span data-l="en">Product Designer, co-creator of the system</span><span data-l="es">Product Designer, cocreación del sistema</span></span></div><div><span class="meta"><span data-l="en">Context</span><span data-l="es">Contexto</span></span><span><span data-l="en">Three digital products</span><span data-l="es">Tres productos digitales</span></span></div><div><span class="meta"><span data-l="en">Year</span><span data-l="es">Año</span></span><span>2025–26</span></div><div><span class="meta"><span data-l="en">Scope</span><span data-l="es">Alcance</span></span><span><span data-l="en">Tokens, components, brand identity</span><span data-l="es">Tokens, componentes, identidad de marca</span></span></div></div>
+        <nav class="toc-v" aria-label="Chapters"><a href="#c1"><span data-l="en">The challenge</span><span data-l="es">El reto</span></a><a href="#c2"><span data-l="en">Three brands</span><span data-l="es">Tres marcas</span></a><a href="#c3">Tokens</a><a href="#c4"><span data-l="en">Components</span><span data-l="es">Componentes</span></a><a href="#c5"><span data-l="en">Accessibility</span><span data-l="es">Accesibilidad</span></a><a href="#c6"><span data-l="en">With development</span><span data-l="es">Con desarrollo</span></a><a href="#c7"><span data-l="en">Impact</span><span data-l="es">Impacto</span></a><a href="#c8"><span data-l="en">Looking back</span><span data-l="es">Mirando atrás</span></a></nav>
+      </div>
+    </aside>
+    <main class="main">
+    <figure class="card case-cover"><img fetchpriority="high" width="1600" height="1000" src="../assets/img/design-system/cover.jpg?v=3" alt="Three brand themes stacked as layers of one design system"></figure>
+
+    <section class="chapter" id="c1">
+      <h2><span data-l="en">The challenge</span><span data-l="es">El reto</span></h2>
+      <div class="chapter-body">
+        <p class="big" data-l="en">Inconsistent interfaces, repeated work and slow delivery.</p>
+        <p class="big" data-l="es">Interfaces inconsistentes, trabajo repetido y entregas lentas.</p>
+        <p data-l="en">The same things were designed several times and everything took longer than it should. We started the design system in December 2025 with one brand, and quickly had a first version the team could use.</p>
+        <p data-l="es">Se trabajaba varias veces sobre lo mismo y todo tardaba más de lo necesario. Empezamos el design system en diciembre de 2025 con una sola marca y enseguida tuvimos una primera versión que el equipo podía usar.</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="c2">
+      <h2><span data-l="en">Three brands</span><span data-l="es">Tres marcas</span></h2>
+      <div class="chapter-body">
+        <p class="big" data-l="en">Two of the three brands didn’t exist yet.</p>
+        <p class="big" data-l="es">Dos de las tres marcas todavía no existían.</p>
+        <p data-l="en">Part of the project was defining their identity from scratch, and I designed the logos of two of them. Each brand answers to its context: Brand C is an internal SaaS that shows a lot of information, so it needed a clean, serious language. Brands A and B have a more relaxed, approachable image.</p>
+        <p data-l="es">Parte del proyecto fue definir su identidad desde cero, y diseñé los logos de dos de ellas. Cada marca responde a su contexto: la Marca C es un SaaS interno que muestra mucha información, así que necesitaba un lenguaje limpio y serio. Las marcas A y B tienen una imagen más relajada y cercana.</p>
+      </div>
+    </section>
+
+    <figure class="card figure"><img decoding="async" loading="lazy" width="1600" height="1000" src="../assets/img/design-system/menus.jpg?v=3" alt="Side navigation in three brand themes"><figcaption class="meta"><span data-l="en">The same navigation in the three brands. Colors and logos are anonymized.</span><span data-l="es">La misma navegación en las tres marcas. Colores y logos anonimizados.</span></figcaption></figure>
+
+    <section class="chapter" id="c3">
+      <h2>Tokens</h2>
+      <div class="chapter-body">
+        <p class="big" data-l="en">Same components, different decisions.</p>
+        <p class="big" data-l="es">Mismos componentes, distintas decisiones.</p>
+        <div class="stats"><div><b>561</b><span><span data-l="en">variables</span><span data-l="es">variables</span></span></div><div><b>174</b><span><span data-l="en">primitive tokens</span><span data-l="es">tokens primitivos</span></span></div><div><b>387</b><span><span data-l="en">brand tokens</span><span data-l="es">tokens de marca</span></span></div></div>
+        <p class="lead-in" data-l="en">Primitives hold the raw values and brand tokens give them meaning, with one mode per brand. Switching mode changes a component’s typeface, color, corners and spacing without touching the component. This is what changes from one brand to another:</p>
+        <p class="lead-in" data-l="es">Las primitivas guardan los valores y los tokens de marca les dan significado, con un modo por marca. Al cambiar de modo, un componente cambia de tipografía, color, esquinas y espaciado sin tocar el componente. Esto es lo que cambia de una marca a otra:</p>
+        <div class="brand-specs"><article class="brand-spec brand-a" style="--spec-font:'Lexend';--spec-btn:60px;--spec-card:24px;--spec-pad:20px">
+          <h3><span data-l="en">Brand A</span><span data-l="es">Marca A</span></h3>
+          <div class="spec-row"><span class="spec-aa" aria-hidden="true">Aa</span><p><b><span data-l="en">Typeface</span><span data-l="es">Tipografía</span></b>Lexend</p></div>
+          <div class="spec-row"><span class="spec-btn" aria-hidden="true"><span data-l="en">Continue</span><span data-l="es">Continuar</span></span><p><b><span data-l="en">Button corners</span><span data-l="es">Esquinas del botón</span></b>60 px</p></div>
+          <div class="spec-row"><span class="spec-card" aria-hidden="true"></span><p><b><span data-l="en">Card corners</span><span data-l="es">Esquinas de la tarjeta</span></b>24 px</p></div>
+          <div class="spec-row"><span class="spec-pad" aria-hidden="true"><i></i></span><p><b><span data-l="en">Inner spacing</span><span data-l="es">Espacio interior</span></b>20 px</p></div>
+        </article><article class="brand-spec brand-b" style="--spec-font:'Plus Jakarta Sans';--spec-btn:60px;--spec-card:48px;--spec-pad:24px">
+          <h3><span data-l="en">Brand B</span><span data-l="es">Marca B</span></h3>
+          <div class="spec-row"><span class="spec-aa" aria-hidden="true">Aa</span><p><b><span data-l="en">Typeface</span><span data-l="es">Tipografía</span></b>Plus Jakarta Sans</p></div>
+          <div class="spec-row"><span class="spec-btn" aria-hidden="true"><span data-l="en">Continue</span><span data-l="es">Continuar</span></span><p><b><span data-l="en">Button corners</span><span data-l="es">Esquinas del botón</span></b>60 px</p></div>
+          <div class="spec-row"><span class="spec-card" aria-hidden="true"></span><p><b><span data-l="en">Card corners</span><span data-l="es">Esquinas de la tarjeta</span></b>48 px</p></div>
+          <div class="spec-row"><span class="spec-pad" aria-hidden="true"><i></i></span><p><b><span data-l="en">Inner spacing</span><span data-l="es">Espacio interior</span></b>24 px</p></div>
+        </article><article class="brand-spec brand-c" style="--spec-font:'Geist';--spec-btn:8px;--spec-card:24px;--spec-pad:20px">
+          <h3><span data-l="en">Brand C</span><span data-l="es">Marca C</span></h3>
+          <div class="spec-row"><span class="spec-aa" aria-hidden="true">Aa</span><p><b><span data-l="en">Typeface</span><span data-l="es">Tipografía</span></b>Geist</p></div>
+          <div class="spec-row"><span class="spec-btn" aria-hidden="true"><span data-l="en">Continue</span><span data-l="es">Continuar</span></span><p><b><span data-l="en">Button corners</span><span data-l="es">Esquinas del botón</span></b>8 px</p></div>
+          <div class="spec-row"><span class="spec-card" aria-hidden="true"></span><p><b><span data-l="en">Card corners</span><span data-l="es">Esquinas de la tarjeta</span></b>24 px</p></div>
+          <div class="spec-row"><span class="spec-pad" aria-hidden="true"><i></i></span><p><b><span data-l="en">Inner spacing</span><span data-l="es">Espacio interior</span></b>20 px</p></div>
+        </article></div>
+      </div>
+    </section>
+
+    <section class="chapter" id="c4">
+      <h2><span data-l="en">Components</span><span data-l="es">Componentes</span></h2>
+      <div class="chapter-body">
+        <p class="big" data-l="en">A library built to be reused.</p>
+        <p class="big" data-l="es">Una librería pensada para reutilizarse.</p>
+        <p data-l="en">The library has 95 component sets, from buttons and forms to navigation, tables and feedback. The Button alone covers 140 variants across type, size, color and state.</p>
+        <p data-l="es">La librería tiene 95 conjuntos de componentes, desde botones y formularios hasta navegación, tablas y mensajes de estado. Solo el botón cubre 140 variantes de tipo, tamaño, color y estado.</p>
+      </div>
+    </section>
+
+    <figure class="card figure"><picture><source media="(max-width: 900px)" srcset="../assets/img/design-system/botones-m.jpg?v=3" width="800" height="1264"><img decoding="async" loading="lazy" width="1600" height="1384" src="../assets/img/design-system/botones.jpg?v=3" alt="Button variants in three brand themes"></picture><figcaption class="meta"><span data-l="en">Button types, sizes and colors in each brand</span><span data-l="es">Tipos, tamaños y colores de botón en cada marca</span></figcaption></figure>
+
+    <figure class="card figure"><img decoding="async" loading="lazy" width="1600" height="928" src="../assets/img/design-system/libreria.jpg?v=3" alt="A selection of components from the library"><figcaption class="meta"><span data-l="en">A selection of the library: chips, tabs, toasts, timeline, alerts and expandable lists</span><span data-l="es">Una selección de la librería: chips, pestañas, avisos, cronología, alertas y listas desplegables</span></figcaption></figure>
+
+    <figure class="card figure"><img decoding="async" loading="lazy" width="1600" height="964" src="../assets/img/design-system/modales.jpg?v=3" alt="The same dialogs in three brand themes"><figcaption class="meta"><span data-l="en">The same dialogs adapt to each brand through tokens</span><span data-l="es">Los mismos diálogos se adaptan a cada marca mediante tokens</span></figcaption></figure>
+
+    <section class="chapter" id="c5">
+      <h2><span data-l="en">Accessibility</span><span data-l="es">Accesibilidad</span></h2>
+      <div class="chapter-body">
+        <p class="big" data-l="en">Accessibility was a design criterion, not a final check.</p>
+        <p class="big" data-l="es">La accesibilidad fue un criterio de diseño, no una revisión final.</p>
+        <p data-l="en">Three brands can’t mean three levels of usability, so our goal was for all of them to be accessible. The primary color of Brands B and C exceeds the AA contrast level with white text. In Brand A the color was an imposed brand requirement we couldn’t change, so it stays below that level. Across all three, alerts and validation don’t rely on color alone: they pair it with an icon and a text label, and semantic tokens keep error, warning and success consistent. The colors on this page have been changed to keep the brands anonymous; contrast levels refer to the original palettes.</p>
+        <p data-l="es">Tres marcas no pueden significar tres niveles de usabilidad, así que nuestro objetivo era que todas fueran accesibles. El color principal de las marcas B y C supera el nivel de contraste AA con texto blanco. En la Marca A el color fue una imposición de marca que no pudimos cambiar, por lo que queda por debajo de ese nivel. En las tres, las alertas y las validaciones no dependen solo del color: lo combinan con un icono y un texto, y los tokens semánticos mantienen coherentes el error, el aviso y el éxito. Los colores de esta página se han cambiado para mantener el anonimato de las marcas; los niveles de contraste se refieren a las paletas originales.</p>
+      </div>
+    </section>
+
+    <figure class="card figure"><img decoding="async" loading="lazy" width="1600" height="592" src="../assets/img/design-system/seguridad.jpg?v=3" alt="Password strength feedback in three brand themes"><figcaption class="meta"><span data-l="en">Password strength combines color, icon, text and progress</span><span data-l="es">La seguridad de la contraseña combina color, icono, texto y progreso</span></figcaption></figure>
+
+    <section class="chapter" id="c6">
+      <h2><span data-l="en">With development</span><span data-l="es">Con desarrollo</span></h2>
+      <div class="chapter-body">
+        <p class="big" data-l="en">Design and development speak the same language.</p>
+        <p class="big" data-l="es">Diseño y desarrollo hablan el mismo idioma.</p>
+        <p data-l="en">I work very closely with development, and the team uses the same tokens in code. A decision made in the system reaches the product without being reinterpreted along the way.</p>
+        <p data-l="es">Trabajo muy de cerca con desarrollo, y el equipo usa los mismos tokens en código. Una decisión tomada en el sistema llega al producto sin reinterpretarse por el camino.</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="c7">
+      <h2><span data-l="en">Impact</span><span data-l="es">Impacto</span></h2>
+      <div class="chapter-body">
+        <p class="big" data-l="en">From weeks to days.</p>
+        <p class="big" data-l="es">De semanas a días.</p>
+        <p data-l="en">A series of screens that used to take weeks now takes days. Visual consistency and design quality improved, and the system is already the base of two products, with the third migrating onto it.</p>
+        <p data-l="es">Una serie de pantallas que antes llevaba semanas ahora lleva días. Mejoraron la consistencia visual y la calidad del diseño, y el sistema ya es la base de dos productos, con el tercero en migración.</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="c8">
+      <h2><span data-l="en">Looking back</span><span data-l="es">Mirando atrás</span></h2>
+      <div class="chapter-body">
+        <p data-l="en">Today I would give documentation more weight, use slots (they weren’t available in Figma when we started) and automate more of the process. This documentation page for the Button sets the model for the rest of the library.</p>
+        <p data-l="es">Hoy daría más peso a la documentación, usaría slots (no existían en Figma cuando empezamos) y automatizaría más el proceso. Esta página de documentación del botón marca el modelo para el resto de la librería.</p>
+      </div>
+    </section>
+
+    <figure class="card figure"><picture><source media="(max-width: 900px)" srcset="../assets/img/design-system/documentacion-m.jpg?v=3" width="800" height="1890"><img decoding="async" loading="lazy" width="1600" height="1908" src="../assets/img/design-system/documentacion.jpg?v=3" alt="Documentation page for the Button component"></picture><figcaption class="meta"><span data-l="en">Button component documentation</span><span data-l="es">Documentación del componente botón</span></figcaption></figure>
+
+    <a class="card next" href="forte.html">
+      <span class="meta"><span data-l="en">Next project</span><span data-l="es">Siguiente proyecto</span></span>
+      <span class="next-title">Forte</span>
+    </a>
+
+    <footer class="foot">
+        <span>© <span data-year></span> Adrián Medina</span>
+        <nav><a class="ul" href="../assets/AdrianMedina-Resume.pdf" target="_blank" rel="noopener">CV</a><a class="ul" href="https://www.linkedin.com/in/adrian-medina-sanchez/" target="_blank" rel="noopener">LinkedIn</a></nav>
+      </footer>
+    </main>
+  </div>
+  <script src="../assets/js/site.js?v=3"></script>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b4ddf8878439459380225249ac519185"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
