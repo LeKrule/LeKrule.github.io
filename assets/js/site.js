@@ -4,7 +4,18 @@
 
   /* ---------- Idioma (EN/ES), recordado entre visitas ---------- */
   const langButtons = document.querySelectorAll(".lang [data-set]");
-  const markLang = () => langButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === root.dataset.lang));
+  // Línea de acento bajo el idioma activo; se coloca sin animar y luego se desliza
+  const langBox = document.querySelector(".lang");
+  const line = langBox && langBox.appendChild(Object.assign(document.createElement("span"), { className: "lang-line" }));
+  const placeLine = () => {
+    const on = langBox && langBox.querySelector(`[data-set="${root.dataset.lang}"]`);
+    if (line && on) { line.style.left = `${on.offsetLeft}px`; line.style.width = `${on.offsetWidth}px`; }
+  };
+  const markLang = () => { langButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.set === root.dataset.lang)); placeLine(); };
+  if (line) {
+    line.setAttribute("aria-hidden", "true");
+    document.fonts.ready.then(() => { placeLine(); requestAnimationFrame(() => line.classList.add("ready")); });
+  }
   langButtons.forEach((b) => b.addEventListener("click", () => {
     root.dataset.lang = root.lang = b.dataset.set;
     localStorage.setItem("lang", b.dataset.set);
@@ -12,6 +23,18 @@
     dispatchEvent(new Event("langchange"));
   }));
   markLang();
+
+  /* ---------- Logo: el círculo se acerca un poco al cursor (imán) ---------- */
+  const logo = document.querySelector(".me");
+  if (logo && matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)").matches) {
+    const dot = logo.querySelector("svg");
+    const clamp = (v) => Math.max(-6, Math.min(6, v));
+    logo.addEventListener("pointermove", (e) => {
+      const r = logo.getBoundingClientRect();
+      dot.style.translate = `${clamp((e.clientX - r.left - r.width / 2) / 3)}px ${clamp((e.clientY - r.top - r.height / 2) / 3)}px`;
+    });
+    logo.addEventListener("pointerleave", () => (dot.style.translate = ""));
+  }
 
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 
