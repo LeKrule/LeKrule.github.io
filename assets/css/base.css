@@ -40,10 +40,13 @@ p, li { text-wrap: pretty; }
 
 /* ---------- Estructura: columna fija a la izquierda, contenido a la derecha ---------- */
 .layout { display: grid; grid-template-columns: minmax(320px, 4fr) minmax(0, 8fr); gap: 96px; max-width: 1360px; margin: 0 auto; padding: 0 40px; }
-.side { position: sticky; top: 0; height: 100svh; overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; padding: 32px 0 36px; }
+.side { position: sticky; top: 0; height: 100svh; overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; padding: 32px 4px 36px; margin-inline: -4px; }   /* margen para que el scroll no recorte bordes */
 .side::-webkit-scrollbar { display: none; }
 .side-top { display: flex; justify-content: space-between; align-items: center; }
-.me { font-weight: 500; }
+.me { position: relative; display: block; width: 24px; height: 24px; color: var(--accent); transition: scale .2s ease-out; }
+.me svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.me::after { content: ""; position: absolute; inset: -10px; }   /* zona táctil de 44 px */
+.me:active { scale: .92; }
 .main { padding: 32px 0 40px; min-width: 0; }
 
 .lang { display: flex; background: var(--card); border-radius: 1000px; padding: 4px; box-shadow: 0 0 0 1px var(--rule); }
@@ -70,7 +73,7 @@ html[data-lang="es"] .lang [data-set="es"], html[data-lang="en"] .lang [data-set
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; gap: 0; padding: 0 18px; }
-  .side { position: static; height: auto; overflow: visible; padding: 20px 0 0; }
+  .side { position: static; height: auto; overflow: visible; padding: 20px 0 0; margin-inline: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
