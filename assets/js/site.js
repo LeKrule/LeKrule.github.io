@@ -56,8 +56,14 @@
   const targets = spyLinks.map((a) => document.getElementById(a.hash.slice(1)));
   if (spyLinks.length && targets.every(Boolean)) {
     let ticking = false;
+    // Al pulsar un enlace del índice se marca ese, aunque la sección quede cerca del final
+    // y no pueda subir hasta arriba; vuelve al cálculo normal en cuanto la persona hace scroll
+    let picked = -1;
+    spyLinks.forEach((a, i) => a.addEventListener("click", () => { picked = i; requestAnimationFrame(spy); }));
+    ["wheel", "touchmove", "keydown"].forEach((ev) => addEventListener(ev, () => (picked = -1), { passive: true }));
     const spy = () => {
       ticking = false;
+      if (picked >= 0) { spyLinks.forEach((a, i) => a.classList.toggle("on", i === picked)); return; }
       const line = innerHeight * 0.35;
       let idx = document.querySelector(".toc") ? 0 : -1;   // en los casos, nada marcado sobre la portada
       targets.forEach((t, i) => { if (t.getBoundingClientRect().top <= line) idx = i; });

@@ -59,4 +59,25 @@
     term.addEventListener("blur", hide);
   });
   addEventListener("keydown", (e) => e.key === "Escape" && hide());
+
+  /* ---------- Entrada escalonada: primero la columna izquierda, luego la derecha ---------- */
+  if (root.classList.contains("intro")) {
+    sessionStorage.setItem("intro-seen", "1");
+    let i = 0;
+    const tag = (el, n) => { el.setAttribute("data-in", ""); el.style.setProperty("--i", n); };
+    tag(document.querySelector(".side-top"), i++);
+    const es = [...document.querySelectorAll('.bio[data-l="es"] > *')], en = [...document.querySelectorAll('.bio[data-l="en"] > *')];
+    es.forEach((el, k) => { tag(el, i + k); if (en[k]) tag(en[k], i + k); });
+    i += es.length;
+    document.querySelectorAll(".toc, .status").forEach((el) => tag(el, i++));
+    i += 2;   // pausa breve antes de la columna derecha
+    document.querySelectorAll("#work > .label, #work > .case, .main > section:not(#work), .main > .foot")
+      .forEach((el, k) => tag(el, i + k * 2.4));   // 170 ms entre bloques grandes
+    addEventListener("animationend", (e) => e.target.classList.add("in-done"));
+    // arranca con la tipografía y la primera imagen listas (como mucho 700 ms)
+    const cover = document.querySelector(".case img");
+    const ready = Promise.all([document.fonts.ready, cover?.decode ? cover.decode().catch(() => {}) : 0]);
+    Promise.race([ready, new Promise((r) => setTimeout(r, 700))])
+      .then(() => requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("go"))));
+  }
 })();
