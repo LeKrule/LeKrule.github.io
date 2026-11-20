@@ -31,8 +31,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..600&family=Funnel+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/base.css?v=20">
-  <link rel="stylesheet" href="assets/css/home.css?v=20">
+  <link rel="stylesheet" href="assets/css/base.css?v=21">
+  <link rel="stylesheet" href="assets/css/home.css?v=21">
   <script>
     if (!sessionStorage.getItem("intro-seen") && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
       document.documentElement.classList.add("intro");
@@ -129,9 +129,13 @@
         <div class="about-mini">
           <img src="assets/img/adrian.jpg" width="800" height="800" alt="Portrait of Adrián Medina" loading="lazy" decoding="async">
           <div>
-            <p data-l="es">Soy sistemático y me gusta entender a todas las partes, de los usuarios a los desarrolladores. Lo que más disfruto es la UI, la investigación y los design systems.</p>
-            <p data-l="en">I’m systematic and I like understanding everyone involved, from users to developers. UI, research and design systems are what I enjoy most.</p>
-            <p><a class="ul" href="about.html"><span data-l="es">Más sobre mí, formación y herramientas</span><span data-l="en">More about me, education and toolkit</span></a></p>
+            <dl class="facts">
+              <div><dt><span data-l="es">Base</span><span data-l="en">Based in</span></dt><dd>Madrid</dd></div>
+              <div><dt><span data-l="es">En UX/UI</span><span data-l="en">In UX/UI</span></dt><dd><span data-l="es">Desde 2022</span><span data-l="en">Since 2022</span></dd></div>
+              <div><dt><span data-l="es">Idiomas</span><span data-l="en">Languages</span></dt><dd><span data-l="es">Español nativo · Inglés C1</span><span data-l="en">Spanish native · English C1</span></dd></div>
+              <div><dt><span data-l="es">Formación</span><span data-l="en">Education</span></dt><dd><span data-l="es">HND en Computing · CFGS DAM</span><span data-l="en">HND in Computing · Higher VET in App Development</span></dd></div>
+            </dl>
+            <a class="ul" href="about.html"><span data-l="es">Más sobre mí, formación y herramientas</span><span data-l="en">More about me, education and toolkit</span></a>
           </div>
         </div>
       </section>
