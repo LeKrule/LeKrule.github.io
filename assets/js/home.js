@@ -3,20 +3,12 @@
   const root = document.documentElement;
   const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  /* ---------- Hora de Madrid ---------- */
+  /* ---------- Hora de Madrid (solo en la vista previa de «Madrid») ---------- */
   const fmt = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Madrid", hour: "2-digit", minute: "2-digit" });
-  const status = document.querySelector("[data-status]");
   const bigTime = document.querySelector("[data-madrid]");
-  const renderTime = () => {
-    const t = fmt.format(new Date());
-    status.textContent = root.dataset.lang === "es"
-      ? `Son las ${t} en Madrid. Abierto a nuevas oportunidades.`
-      : `It's ${t} in Madrid. Open to new roles.`;
-    bigTime.textContent = t;
-  };
+  const renderTime = () => { bigTime.textContent = fmt.format(new Date()); };
   renderTime();
   setInterval(renderTime, 15000);
-  addEventListener("langchange", renderTime);
 
   /* ---------- Vistas previas: cada término subrayado abre la suya ---------- */
   const peek = document.querySelector(".peek");
