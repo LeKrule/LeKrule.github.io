@@ -54,6 +54,7 @@
 .facts div { padding: 12px 16px 12px 0; border-top: 1px solid var(--rule); }
 .facts dt { color: var(--ink-2); font-size: 14px; }
 .facts dd { margin: 2px 0 0; font-weight: 500; }
+.facts .wide { grid-column: 1 / -1; }
 
 /* ---------- Contacto ---------- */
 .contact-links { display: flex; gap: 24px; margin: 16px 0 0; }

@@ -40,7 +40,7 @@ p, li { text-wrap: pretty; }
 
 /* ---------- Estructura: columna fija a la izquierda, contenido a la derecha ---------- */
 .layout { display: grid; grid-template-columns: minmax(320px, 4fr) minmax(0, 8fr); gap: 96px; max-width: 1360px; margin: 0 auto; padding: 0 40px; }
-.side { position: sticky; top: 0; height: 100svh; overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; padding: 32px 4px 36px; margin-inline: -4px; }   /* margen para que el scroll no recorte bordes */
+.side { position: sticky; top: 0; height: 100svh; overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; padding: 32px 12px 36px; margin-inline: -12px; }   /* margen para que el scroll no recorte el logo al moverse (imán de 6 px) */
 .side::-webkit-scrollbar { display: none; }
 .side-top { display: flex; justify-content: space-between; align-items: center; }
 .me { position: relative; display: block; width: 24px; height: 24px; color: var(--accent); transition: scale .2s ease-out; }
